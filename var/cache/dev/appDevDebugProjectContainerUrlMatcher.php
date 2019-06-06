@@ -189,6 +189,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // musicien_remove_id
+        if (0 === strpos($pathinfo, '/musicien/remove') && preg_match('#^/musicien/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'musicien_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\AdministrateurController::removeIdAction',));
+        }
+
         if ('/' === $pathinfo && !$allow) {
             throw new Symfony\Component\Routing\Exception\NoConfigurationException();
         }

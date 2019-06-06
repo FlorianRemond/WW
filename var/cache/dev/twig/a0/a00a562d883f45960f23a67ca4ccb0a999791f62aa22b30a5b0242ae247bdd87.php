@@ -93,7 +93,7 @@ class __TwigTemplate_a350d4d0977d62c99ad4e18cfa98cde6faea2cb8ce662dfc60ed493ded8
         echo "    </table>
 <br>
 
-<a href=\"pageGestionnaireInsert\">suppression ou gestionnaire</a><br>
+<a href=\"pageGestionnaireInsert\"> Suppression ou Ajout d'un gestionnaire</a><br>
 
 liste des techniciens<br>
 
@@ -125,7 +125,7 @@ liste des techniciens<br>
         echo "    </table>
     <br>
 
-<a href=\"pageTechnicienInsert\">suppression ou ajout tech</a><br>
+<a href=\"pageTechnicienInsert\"> Suppression ou Ajout d'un technicien tech</a><br>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -164,7 +164,7 @@ liste des gestionnaires<br>
     </table>
 <br>
 
-<a href=\"pageGestionnaireInsert\">suppression ou gestionnaire</a><br>
+<a href=\"pageGestionnaireInsert\"> Suppression ou Ajout d'un gestionnaire</a><br>
 
 liste des techniciens<br>
 
@@ -181,7 +181,7 @@ liste des techniciens<br>
     </table>
     <br>
 
-<a href=\"pageTechnicienInsert\">suppression ou ajout tech</a><br>
+<a href=\"pageTechnicienInsert\"> Suppression ou Ajout d'un technicien tech</a><br>
 {% endblock %}", "pageAdmin.html.twig", "C:\\xampp\\htdocs\\PHP\\Projet perso\\WW\\app\\Resources\\views\\pageAdmin.html.twig");
     }
 }

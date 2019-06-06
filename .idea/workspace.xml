@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="335a6569-9c64-438b-8ae4-fb9a4ec05066" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/pageAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/pageAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Technicien.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Technicien.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/GestionnaireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/GestionnaireType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/TechnicienType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/TechnicienType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/4/U/pvXy8EozqKi3wo04MOUg" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/4/U/pvXy8EozqKi3wo04MOUg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/9/N/VlAWpPAHmRXlCFcMUoJH" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/9/N/VlAWpPAHmRXlCFcMUoJH" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/9/V/9HNkdOM3S-XJAJC+cZY7" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/9/V/9HNkdOM3S-XJAJC+cZY7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/A/-/UHaL9-oxx6toHCFATYg3" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/A/-/UHaL9-oxx6toHCFATYg3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/A/Q/PaaUrMEbVC3lzH2jm-Fl" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/A/Q/PaaUrMEbVC3lzH2jm-Fl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/N/H/7YOREdMYXauP4JgIuxMG" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/N/H/7YOREdMYXauP4JgIuxMG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/T/F/bhIJffXJJCdzrNv8GZIh" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/T/F/bhIJffXJJCdzrNv8GZIh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/V/W/oxHIui8wW9vBD6WXR4Ar" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/V/W/oxHIui8wW9vBD6WXR4Ar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/W/I/5hDpe6V7DHQ6y3p1OZrV" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZvO8WCOxn/W/I/5hDpe6V7DHQ6y3p1OZrV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/pageGestionnaireInsert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/pageGestionnaireInsert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdministrateurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdministrateurController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/a0/a00a562d883f45960f23a67ca4ccb0a999791f62aa22b30a5b0242ae247bdd87.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a0/a00a562d883f45960f23a67ca4ccb0a999791f62aa22b30a5b0242ae247bdd87.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/c0/c0b2811e0863e37657afdeacea9ab8e40d3e2e8d7004409fc53e74d5723e6413.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c0/c0b2811e0863e37657afdeacea9ab8e40d3e2e8d7004409fc53e74d5723e6413.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_h9tamiam4osbg23rmimb50rff2" beforeDir="false" afterPath="$PROJECT_DIR$/var/sessions/dev/sess_h9tamiam4osbg23rmimb50rff2" afterDir="false" />
     </list>
@@ -35,11 +21,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/pageAdmin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="21" column="11" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="21" selection-end-column="11" />
+            <state relative-caret-position="186">
+              <caret line="17" column="72" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdministrateurController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-56">
+              <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="25" />
+              <folding>
+                <element signature="e#40#97#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,7 +46,16 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/TechnicienType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="532">
-              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/pageGestionnaireInsert.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -132,12 +139,13 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AministrateurController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/GestionnaireController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/test.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdministrateurController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Gestionnaire.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/GestionnaireType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Technicien.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/TechnicienType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/pageAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/pageGestionnaireInsert.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdministrateurController.php" />
       </list>
     </option>
   </component>
@@ -187,10 +195,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1000" />
-    <option name="y" value="6" />
-    <option name="width" value="916" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-10" />
+    <option name="y" value="23" />
+    <option name="width" value="1005" />
     <option name="height" value="1018" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -319,18 +327,18 @@
       <updated>1559757949842</updated>
       <workItem from="1559757952719" duration="1109000" />
       <workItem from="1559759074977" duration="7907000" />
-      <workItem from="1559807715563" duration="16248000" />
+      <workItem from="1559807715563" duration="16811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25264000" />
+    <option name="totallyTimeSpent" value="25827000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-10" y="23" width="1005" height="1018" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15260416" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31243682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -453,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/pageGestionnaireInsert.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Piece.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -567,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdministrateurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#40#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GestionnaireController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -628,14 +619,31 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/TechnicienType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
-          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdministrateurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#40#97#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/pageAdmin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="21" selection-end-column="11" />
+        <state relative-caret-position="186">
+          <caret line="17" column="72" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/pageGestionnaireInsert.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

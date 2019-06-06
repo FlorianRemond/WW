@@ -27,6 +27,24 @@ class AdministrateurController extends Controller
         return $response;
 
     }
+    /**
+     * @Route("/musicien/remove/{id}", name="musicien_remove_id")
+     */
+    public function removeIdAction($id)
+    {
+        // récupérer un seul article depuis la base de données
+        $em = $this->getDoctrine()->getManager();
+        $musicien = $em->getRepository("AppBundle:Musicien")->find($id);
+
+        // supprimer une entité
+        if ($musicien != null) {
+            $em->remove($musicien);
+            $em->flush();
+        }
+        return $this->redirectToRoute('globalview');
+    }
+
+
 
 
     /*Balise de fin*/

@@ -42,6 +42,7 @@ class appDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         'pageVehicule_insert' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\VehiculeFormController::insertVehiculeAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pageVehiculeInsert',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'pageOperation_insert' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\OperationFormController::insertOperationAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pageOperationInsert',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'pageAdmin' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\AdministrateurController::GestionnaireViewAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pageAdmin',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'musicien_remove_id' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\AdministrateurController::removeIdAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/musicien/remove',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     ];
         }
     }
