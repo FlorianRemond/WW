@@ -1,0 +1,55 @@
+Ce test a pour objectifs de mesurer vos capacités d’analyse, de gestion de projet et de développement. Il est volontairement trop volumineux, l’objectif n’étant pas de le finir, mais de montrer votre manière d’aborder le problème, votre méthodologie, votre organisation et vos compétences en programmation.
+
+Le sujet est le développement d’un site web de gestion de la maintenance des véhicules d’un réseau de transport.
+
+Critères pris en compte
+•	Temps pour rendre le projet
+•	Respect des consignes
+•	Qualité du code (logique, organisation, commentaires, documentation)
+•	Temps mis pour faire fonctionner votre projet sur notre serveur de test
+•	Outils utilisés
+•	Design
+•	Sécurité de votre application
+•	Évolutivité du code
+•	Tout ajout de votre part !
+
+Sujet
+•	5 entités principales : administrateur, gestionnaires, techniciens, véhicules, opérations de maintenance
+•	Un seul administrateur qui peut ajouter et supprimer des gestionnaires et des techniciens via un formulaire
+•	Les gestionnaires peuvent ajouter et supprimer des véhicules selon le même principe
+•	Les techniciens peuvent indiquer un problème sur un véhicule, et créer/modifier une opération de maintenance pour la compléter
+•	Une opération de maintenance possède une date de début, date de fin, un sujet, une description, une liste de pièces affectées, une note pour chaque technicien ayant intervenu dans cette opération, ainsi que des photos.
+•	Un tableau de bord permettant de visualiser rapidement l’état des véhicules, les opérations en cours et à venir, un graphique sur le nombre d’opérations ces derniers mois, etc.
+•	Une page pour chaque véhicule, indiquant son type, sa date d’achat et la liste des opérations associées au véhicule.
+•	[BONUS] : Une api REST pour accéder à toutes ces informations.
+
+Technologies
+Les technologies à utiliser sont HTML / CSS / PHP / Mysql. Vous maitrisez mieux autre chose et c’est utilisable dans le développement d’une application Web (Django ou Node.js par exemple)  ? Vous pouvez ! A condition de fournir un README.md d’installation, que cela ne soit pas trop complexe et que cela fonctionne sur une distribution Linux répandue (Debian 8 / Debian 9, CentOs, Ubuntu stable, Ubuntu LTS). Il est également indispensable que votre code soit correctement versionné avec Git.
+
+
+Conseils
+•	Vous avez assez peu de temps, mais faites quelque chose qui fonctionne quitte à ne pas développer certaines fonctionnalités.
+•	Nous devons tester votre code, faites en sorte que cela fonctionne chez nous.
+•	N’oubliez pas d’inclure tous les fichiers nécessaires de votre projet.
+•	Ne recodez pas la roue comme un algorithme de tri ! Utilisez les ressources disponibles sur Internet.
+
+Rendu
+Pour rendre votre application, envoyez-le-nous par mail à genius@webreathe.fr avec comme sujet
+« Recrutement – Développeur Informatique – Rendu de test » dans une archive zip dont le nom sera formaté ainsi « recrutement-test-[PRENOM]-[NOM].zip »
+•	Dans cette archive il doit y avoir :
+◦	/src/ : votre code source (doit contenir un sous-répertoire .git)
+◦	/screenshots/ : les screenshots de votre résultat
+◦	/README.md : plusieurs informations comme :
+▪	le temps en heures que vous estimez encore nécessaire pour chacune des taches suivantes :
+•	fournir à l’application toutes les fonctionnalités indiquées
+•	réaliser le design
+•	vérifier que tout fonctionne, autant en termes de fonctionnalité que de sécurité
+▪	Votre ressenti sur ce test (difficultés rencontrées par exemple, critiques, intérêts, etc)
+▪	Méthodologie d’installation des outils pour faire fonctionner votre projet si vous avez fait le choix d’utiliser autre chose que PHP/Mysql.
+◦	/annexes/ : Tout ce que vous voudriez rajouter
+
+Et ensuite ?
+Vous pouvez nous poser des questions par mail à genius@webreathe.fr
+A la réception de votre travail, nous vous confirmerons sa réception
+
+Bon courage !

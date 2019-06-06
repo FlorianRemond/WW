@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+ {#affichage des champs du formulaire un par un grace à la variable formTechnicien#}
+
+{{ form_start (formOperation) }}
+    {{ form_row (formOperation.sujet) }}
+    {{ form_row (formOperation.dateDebut) }}
+    {{ form_row (formOperation.dateFin) }}
+    {{ form_row (formOperation.description) }}
+    {{ form_row (formOperation.piece) }}
+    {{ form_row (formOperation.noteTech) }}
+    <input type="submit" value = "Enregistrer une opération" />
+{{ form_end (formOperation) }}
+
+{% endblock %}

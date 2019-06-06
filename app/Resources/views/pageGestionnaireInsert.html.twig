@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+ {#affichage des champs du formulaire un par un grace à la variable formGestionnaire#}
+
+{{ form_start (formGestionnaire) }}
+    {{ form_row (formGestionnaire.nom) }}
+
+    <input type="submit" value = "Enregistrer le gestionnaire" />
+{{ form_end (formGestionnaire) }}
+
+{% endblock %}

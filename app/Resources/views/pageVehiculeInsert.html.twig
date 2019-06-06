@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+ {#affichage des champs du formulaire un par un grace à la variable formTechnicien#}
+
+{{ form_start (formVehicule) }}
+    {{ form_row (formVehicule.type) }}
+    {{ form_row (formVehicule.dateAchat) }}
+    {{ form_row (formVehicule.operation) }}
+    <input type="submit" value = "Enregistrer le véhicule" />
+{{ form_end (formVehicule) }}
+
+{% endblock %}
