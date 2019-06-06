@@ -4,16 +4,18 @@ liste des gestionnaires<br>
     <table>
             <tr >
                 <th>Nom</th>
+                <th>Prénom</th>
             <tr>
                 {% for key,gestionnaire in gestionnaires %}
                 <td>{{ gestionnaire.getNom() }}</td>
+                <td>{{ gestionnaire.getPrenom() }}</td>
                 <td> <a> Suppression d'un gestionnaire en base</a></td>
             </tr>
         {% endfor %}
     </table>
 <br>
 
-<a href="pageGestionnaireInsert">suppression ou gestionnaire</a><br>
+<a href="pageGestionnaireInsert"> Suppression ou Ajout d'un gestionnaire</a><br>
 
 liste des techniciens<br>
 
@@ -23,11 +25,12 @@ liste des techniciens<br>
         <tr>
             {% for key,technicien in techniciens %}
             <td>{{ technicien.getNom() }}</td>
+            <td>{{ technicien.getPrenom() }}</td>
             <td><a> Suppression d'un technicien en base</a></td>
         </tr>
         {% endfor %}
     </table>
     <br>
 
-<a href="pageTechnicienInsert">suppression ou ajout tech</a><br>
+<a href="pageTechnicienInsert"> Suppression ou Ajout d'un technicien tech</a><br>
 {% endblock %}

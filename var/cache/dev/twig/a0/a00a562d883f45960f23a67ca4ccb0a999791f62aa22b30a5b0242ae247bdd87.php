@@ -67,15 +67,20 @@ class __TwigTemplate_a350d4d0977d62c99ad4e18cfa98cde6faea2cb8ce662dfc60ed493ded8
     <table>
             <tr >
                 <th>Nom</th>
+                <th>Prénom</th>
             <tr>
                 ";
-        // line 8
+        // line 9
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["gestionnaires"]) || array_key_exists("gestionnaires", $context) ? $context["gestionnaires"] : (function () { throw new RuntimeError('Variable "gestionnaires" does not exist.', 8, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["gestionnaires"]) || array_key_exists("gestionnaires", $context) ? $context["gestionnaires"] : (function () { throw new RuntimeError('Variable "gestionnaires" does not exist.', 9, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["gestionnaire"]) {
-            // line 9
+            // line 10
             echo "                <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getNom", [], "method", false, false, false, 9), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getNom", [], "method", false, false, false, 10), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 11
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getPrenom", [], "method", false, false, false, 11), "html", null, true);
             echo "</td>
                 <td> <a> Suppression d'un gestionnaire en base</a></td>
             </tr>
@@ -84,7 +89,7 @@ class __TwigTemplate_a350d4d0977d62c99ad4e18cfa98cde6faea2cb8ce662dfc60ed493ded8
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['gestionnaire'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 13
+        // line 15
         echo "    </table>
 <br>
 
@@ -97,13 +102,17 @@ liste des techniciens<br>
             <th>Nom</th>
         <tr>
             ";
-        // line 24
+        // line 26
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["techniciens"]) || array_key_exists("techniciens", $context) ? $context["techniciens"] : (function () { throw new RuntimeError('Variable "techniciens" does not exist.', 24, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["techniciens"]) || array_key_exists("techniciens", $context) ? $context["techniciens"] : (function () { throw new RuntimeError('Variable "techniciens" does not exist.', 26, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["technicien"]) {
-            // line 25
+            // line 27
             echo "            <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getNom", [], "method", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getNom", [], "method", false, false, false, 27), "html", null, true);
+            echo "</td>
+            <td>";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getPrenom", [], "method", false, false, false, 28), "html", null, true);
             echo "</td>
             <td><a> Suppression d'un technicien en base</a></td>
         </tr>
@@ -112,7 +121,7 @@ liste des techniciens<br>
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['technicien'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 32
         echo "    </table>
     <br>
 
@@ -133,7 +142,7 @@ liste des techniciens<br>
 
     public function getDebugInfo()
     {
-        return array (  116 => 29,  105 => 25,  101 => 24,  88 => 13,  77 => 9,  73 => 8,  66 => 3,  47 => 2,  44 => 1,);
+        return array (  125 => 32,  115 => 28,  110 => 27,  106 => 26,  93 => 15,  83 => 11,  78 => 10,  74 => 9,  66 => 3,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -144,9 +153,11 @@ liste des gestionnaires<br>
     <table>
             <tr >
                 <th>Nom</th>
+                <th>Prénom</th>
             <tr>
                 {% for key,gestionnaire in gestionnaires %}
                 <td>{{ gestionnaire.getNom() }}</td>
+                <td>{{ gestionnaire.getPrenom() }}</td>
                 <td> <a> Suppression d'un gestionnaire en base</a></td>
             </tr>
         {% endfor %}
@@ -163,6 +174,7 @@ liste des techniciens<br>
         <tr>
             {% for key,technicien in techniciens %}
             <td>{{ technicien.getNom() }}</td>
+            <td>{{ technicien.getPrenom() }}</td>
             <td><a> Suppression d'un technicien en base</a></td>
         </tr>
         {% endfor %}

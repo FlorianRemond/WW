@@ -28,6 +28,13 @@ class Technicien
      */
     private $nom;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=100)
+     */
+    private $prenom;
+
 
     /**
      * Get id
@@ -82,5 +89,132 @@ class Technicien
     private $operations;
 
 
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->vehicules = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->operations = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Set prenom.
+     *
+     * @param string $prenom
+     *
+     * @return Technicien
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom.
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set administrateur.
+     *
+     * @param \AppBundle\Entity\Administrateur|null $administrateur
+     *
+     * @return Technicien
+     */
+    public function setAdministrateur(\AppBundle\Entity\Administrateur $administrateur = null)
+    {
+        $this->administrateur = $administrateur;
+
+        return $this;
+    }
+
+    /**
+     * Get administrateur.
+     *
+     * @return \AppBundle\Entity\Administrateur|null
+     */
+    public function getAdministrateur()
+    {
+        return $this->administrateur;
+    }
+
+    /**
+     * Add vehicule.
+     *
+     * @param \AppBundle\Entity\Vehicule $vehicule
+     *
+     * @return Technicien
+     */
+    public function addVehicule(\AppBundle\Entity\Vehicule $vehicule)
+    {
+        $this->vehicules[] = $vehicule;
+
+        return $this;
+    }
+
+    /**
+     * Remove vehicule.
+     *
+     * @param \AppBundle\Entity\Vehicule $vehicule
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeVehicule(\AppBundle\Entity\Vehicule $vehicule)
+    {
+        return $this->vehicules->removeElement($vehicule);
+    }
+
+    /**
+     * Get vehicules.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getVehicules()
+    {
+        return $this->vehicules;
+    }
+
+    /**
+     * Add operation.
+     *
+     * @param \AppBundle\Entity\Operation $operation
+     *
+     * @return Technicien
+     */
+    public function addOperation(\AppBundle\Entity\Operation $operation)
+    {
+        $this->operations[] = $operation;
+
+        return $this;
+    }
+
+    /**
+     * Remove operation.
+     *
+     * @param \AppBundle\Entity\Operation $operation
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeOperation(\AppBundle\Entity\Operation $operation)
+    {
+        return $this->operations->removeElement($operation);
+    }
+
+    /**
+     * Get operations.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getOperations()
+    {
+        return $this->operations;
+    }
+}
