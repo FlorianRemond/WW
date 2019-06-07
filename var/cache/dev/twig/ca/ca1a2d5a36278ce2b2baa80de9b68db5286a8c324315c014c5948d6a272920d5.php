@@ -69,22 +69,21 @@ class __TwigTemplate_250e1a5d3d1652038774394dc5decb1bafd155ca51753cd8a5b6393f7c2
 
 Page Gestionnaire
 
-    liste des véhicules <br>
+    Liste des véhicules <br>
     <table>
         <tr >
             <th>Type</th>
             <th>Date d'achat</th>
             <th>Opération</th>
+            <th>Problème</th>
         <tr>
             ";
-        // line 15
+        // line 16
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 15, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 16, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["vehicule"]) {
-            // line 16
-            echo "
-            <td>";
             // line 17
+            echo "            <td>";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 17), "html", null, true);
             echo "</td>
             <td>";
@@ -95,8 +94,14 @@ Page Gestionnaire
             // line 19
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "method", false, false, false, 19), "html", null, true);
             echo "</td>
-
-            <td> <a> Suppression d'un véhicule en base</a></td>
+            <td>";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 20), "html", null, true);
+            echo "</td>
+            <td> <a class=\"btn btn-danger\" href=\"";
+            // line 21
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 21)]), "html", null, true);
+            echo "\" role=\"button\"> Suppression d'un véhicule en base</a></td>
         </tr>
         ";
         }
@@ -106,9 +111,8 @@ Page Gestionnaire
         // line 24
         echo "    </table>
     <br>
-
     <a href=\"pageVehiculeInsert\">ajout</a><br>
-
+    <a href=\"tdb\">  Retour au tableau de bord</a><br>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -130,7 +134,7 @@ Page Gestionnaire
 
     public function getDebugInfo()
     {
-        return array (  107 => 24,  96 => 19,  92 => 18,  88 => 17,  85 => 16,  81 => 15,  68 => 4,  58 => 3,  35 => 2,);
+        return array (  112 => 24,  103 => 21,  99 => 20,  95 => 19,  91 => 18,  86 => 17,  82 => 16,  68 => 4,  58 => 3,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -142,27 +146,26 @@ Page Gestionnaire
 
 Page Gestionnaire
 
-    liste des véhicules <br>
+    Liste des véhicules <br>
     <table>
         <tr >
             <th>Type</th>
             <th>Date d'achat</th>
             <th>Opération</th>
+            <th>Problème</th>
         <tr>
             {% for key,vehicule in vehicules %}
-
             <td>{{ vehicule.getType() }}</td>
             <td>{{ vehicule.getDateAchat | date (\"d/m/Y\") }}</td>
             <td>{{ vehicule.getOperation() }}</td>
-
-            <td> <a> Suppression d'un véhicule en base</a></td>
+            <td>{{ vehicule.getProbleme() }}</td>
+            <td> <a class=\"btn btn-danger\" href=\"{{ path('vehicule_remove_id', {'id': vehicule.id} ) }}\" role=\"button\"> Suppression d'un véhicule en base</a></td>
         </tr>
         {% endfor %}
     </table>
     <br>
-
     <a href=\"pageVehiculeInsert\">ajout</a><br>
-
+    <a href=\"tdb\">  Retour au tableau de bord</a><br>
 {% endblock %}
 
 

@@ -519,6 +519,9 @@
     <service id="AppBundle\Controller\TdbController" class="AppBundle\Controller\TdbController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="AppBundle\Controller\TechnicienController" class="AppBundle\Controller\TechnicienController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="AppBundle\Controller\TechnicienFormController" class="AppBundle\Controller\TechnicienFormController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
@@ -3626,6 +3629,8 @@
     <service id="abstract.instanceof.AppBundle\Controller\OperationFormController" class="AppBundle\Controller\OperationFormController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\TdbController" class="AppBundle\Controller\TdbController" public="true" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\TdbController" class="AppBundle\Controller\TdbController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\TechnicienController" class="AppBundle\Controller\TechnicienController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\TechnicienController" class="AppBundle\Controller\TechnicienController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\TechnicienFormController" class="AppBundle\Controller\TechnicienFormController" public="true" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\TechnicienFormController" class="AppBundle\Controller\TechnicienFormController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\VehiculeFormController" class="AppBundle\Controller\VehiculeFormController" public="true" autowire="true" abstract="true"/>

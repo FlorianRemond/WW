@@ -16,7 +16,8 @@ class VehiculeType extends AbstractType
         $builder
             ->add('type')
             ->add('dateAchat')
-            ->add('operation');
+            ->add('operation')
+            ->add('probleme');
     }
 
     /**

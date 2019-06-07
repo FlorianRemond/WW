@@ -41,9 +41,6 @@ class __TwigTemplate_a350d4d0977d62c99ad4e18cfa98cde6faea2cb8ce662dfc60ed493ded8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "pageAdmin.html.twig"));
 
         // line 1
-        echo "Page Administrateur<br>
-";
-        // line 2
         $this->displayBlock('body', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -62,8 +59,9 @@ class __TwigTemplate_a350d4d0977d62c99ad4e18cfa98cde6faea2cb8ce662dfc60ed493ded8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 3
-        echo "liste des gestionnaires<br>
+        // line 2
+        echo "Page Administrateur<br>
+Liste des gestionnaires<br>
     <table>
             <tr >
                 <th>Nom</th>
@@ -82,7 +80,10 @@ class __TwigTemplate_a350d4d0977d62c99ad4e18cfa98cde6faea2cb8ce662dfc60ed493ded8
             // line 11
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getPrenom", [], "method", false, false, false, 11), "html", null, true);
             echo "</td>
-                <td> <a> Suppression d'un gestionnaire en base</a></td>
+            <td> <a class=\"btn btn-danger\" href=\"";
+            // line 12
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestionnaire_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "id", [], "any", false, false, false, 12)]), "html", null, true);
+            echo "\" role=\"button\"> Suppression d'un gestionnaire en base</a></td>
             </tr>
         ";
         }
@@ -93,13 +94,13 @@ class __TwigTemplate_a350d4d0977d62c99ad4e18cfa98cde6faea2cb8ce662dfc60ed493ded8
         echo "    </table>
 <br>
 
-<a href=\"pageGestionnaireInsert\"> Suppression ou Ajout d'un gestionnaire</a><br>
+<a href=\"pageGestionnaireInsert\">  Ajout d'un gestionnaire</a><br>
 
-liste des techniciens<br>
-
+Liste des techniciens<br>
     <table>
         <tr >
             <th>Nom</th>
+            <th>Prénom</th>
         <tr>
             ";
         // line 26
@@ -114,7 +115,10 @@ liste des techniciens<br>
             // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getPrenom", [], "method", false, false, false, 28), "html", null, true);
             echo "</td>
-            <td><a> Suppression d'un technicien en base</a></td>
+            <td> <a class=\"btn btn-danger\" href=\"";
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("technicien_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["technicien"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            echo "\" role=\"button\"> Suppression d'un techncien en base</a></td>
         </tr>
         ";
         }
@@ -124,8 +128,9 @@ liste des techniciens<br>
         // line 32
         echo "    </table>
     <br>
+<a href=\"pageTechnicienInsert\">  Ajout d'un technicien tech</a><br>
+<a href=\"tdb\">Retour au tableau de bord</a><br>
 
-<a href=\"pageTechnicienInsert\"> Suppression ou Ajout d'un technicien tech</a><br>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -142,14 +147,14 @@ liste des techniciens<br>
 
     public function getDebugInfo()
     {
-        return array (  125 => 32,  115 => 28,  110 => 27,  106 => 26,  93 => 15,  83 => 11,  78 => 10,  74 => 9,  66 => 3,  47 => 2,  44 => 1,);
+        return array (  129 => 32,  120 => 29,  116 => 28,  111 => 27,  107 => 26,  94 => 15,  85 => 12,  81 => 11,  76 => 10,  72 => 9,  63 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("Page Administrateur<br>
-{% block body %}
-liste des gestionnaires<br>
+        return new Source("{% block body %}
+Page Administrateur<br>
+Liste des gestionnaires<br>
     <table>
             <tr >
                 <th>Nom</th>
@@ -158,30 +163,31 @@ liste des gestionnaires<br>
                 {% for key,gestionnaire in gestionnaires %}
                 <td>{{ gestionnaire.getNom() }}</td>
                 <td>{{ gestionnaire.getPrenom() }}</td>
-                <td> <a> Suppression d'un gestionnaire en base</a></td>
+            <td> <a class=\"btn btn-danger\" href=\"{{ path('gestionnaire_remove_id', {'id': gestionnaire.id} ) }}\" role=\"button\"> Suppression d'un gestionnaire en base</a></td>
             </tr>
         {% endfor %}
     </table>
 <br>
 
-<a href=\"pageGestionnaireInsert\"> Suppression ou Ajout d'un gestionnaire</a><br>
+<a href=\"pageGestionnaireInsert\">  Ajout d'un gestionnaire</a><br>
 
-liste des techniciens<br>
-
+Liste des techniciens<br>
     <table>
         <tr >
             <th>Nom</th>
+            <th>Prénom</th>
         <tr>
             {% for key,technicien in techniciens %}
             <td>{{ technicien.getNom() }}</td>
             <td>{{ technicien.getPrenom() }}</td>
-            <td><a> Suppression d'un technicien en base</a></td>
+            <td> <a class=\"btn btn-danger\" href=\"{{ path('technicien_remove_id', {'id': technicien.id} ) }}\" role=\"button\"> Suppression d'un techncien en base</a></td>
         </tr>
         {% endfor %}
     </table>
     <br>
+<a href=\"pageTechnicienInsert\">  Ajout d'un technicien tech</a><br>
+<a href=\"tdb\">Retour au tableau de bord</a><br>
 
-<a href=\"pageTechnicienInsert\"> Suppression ou Ajout d'un technicien tech</a><br>
 {% endblock %}", "pageAdmin.html.twig", "C:\\xampp\\htdocs\\PHP\\Projet perso\\WW\\app\\Resources\\views\\pageAdmin.html.twig");
     }
 }

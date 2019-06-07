@@ -30,6 +30,9 @@ administrateur:
     resource: '@AppBundle/Controller/AdministrateurController.php'
     type: annotation
 
+technicien:
+    resource: '@AppBundle/Controller/TechnicienController.php'
+    type: annotation
 
 
 

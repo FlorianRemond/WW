@@ -38,7 +38,7 @@ class VehiculeFormController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($vehicule);
                 $em->flush();
-                return $this->redirectToRoute('tdb');
+                return $this->redirectToRoute('pageGestionnaire');
             }
         }
         return $this->render('pageVehiculeInsert.html.twig', [

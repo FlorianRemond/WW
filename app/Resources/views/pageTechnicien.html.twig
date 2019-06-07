@@ -1,6 +1,46 @@
 Page Technicien
 
 Liste des opérations<br>
+<table>
+    <tr >
+        <th>Sujet</th>
+        <th>Date de début d'intervention</th>
+        <th>Date de fin d'intervention</th>
+        <th>Description de l'intervention</th>
+        <th>Pièce</th>
+        <th>Note du technicien</th>
+
+    <tr>
+        {% for key,operation in operations %}
+        <td>{{ operation.getSujet() }}</td>
+        <td>{{ operation.getDateDebut | date ("d/m/Y") }}</td>
+        <td>{{ operation.getDateFin | date ("d/m/Y") }}</td>
+        <td>{{ operation.getDescription() }}</td>
+        <td>{{ operation.getPiece() }}</td>
+        <td>{{ operation.getNoteTech() }}</td>
+        <td> <a class="btn btn-danger" href="{{ path('operation_remove_id', {'id': operation.id} ) }}" role="button"> Suppression d'une opération en base</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+<br>
 <a href="pageOperationInsert">ajout</a><br>
-Liste des véhicules<br>
-<a href="pageVehiculeInsert">ajout</a><br>
+
+<table>
+    <tr >
+        <th>Type</th>
+        <th>Date d'achat du véhicule</th>
+        <th>Opération en cours </th>
+        <th>Problème</th>
+    <tr>
+        {% for key,vehicule in vehicules %}
+        <td>{{ vehicule.getType() }}</td>
+        <td>{{ vehicule.getdateAchat | date ("d/m/Y") }}</td>
+        <td>{{ vehicule.getOperation }}</td>
+        <td>{{ vehicule.getProbleme() }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="tdb"> Retour au tableau de bord</a><br>
+

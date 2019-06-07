@@ -38,7 +38,7 @@ class GestionnaireFormController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($gestionnaire);
                 $em->flush();
-                return $this->redirectToRoute('tdb');
+                return $this->redirectToRoute('pageAdmin');
             }
         }
         return $this->render('pageGestionnaireInsert.html.twig', [

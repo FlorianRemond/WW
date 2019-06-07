@@ -28,23 +28,38 @@ class AdministrateurController extends Controller
 
     }
     /**
-     * @Route("/musicien/remove/{id}", name="musicien_remove_id")
+     * @Route("/gestionnaire/remove/{id}", name="gestionnaire_remove_id")
      */
-    public function removeIdAction($id)
+    public function removeGestionnaireIdAction($id)
     {
         // récupérer un seul article depuis la base de données
         $em = $this->getDoctrine()->getManager();
-        $musicien = $em->getRepository("AppBundle:Musicien")->find($id);
+        $gestionnaire = $em->getRepository("AppBundle:Gestionnaire")->find($id);
 
         // supprimer une entité
-        if ($musicien != null) {
-            $em->remove($musicien);
+        if ($gestionnaire != null) {
+            $em->remove($gestionnaire);
             $em->flush();
         }
-        return $this->redirectToRoute('globalview');
+        return $this->redirectToRoute('pageAdmin');
     }
 
+    /**
+     * @Route("/technicien/remove/{id}", name="technicien_remove_id")
+     */
+    public function removeTechnicienIdAction($id)
+    {
+        // récupérer un seul article depuis la base de données
+        $em = $this->getDoctrine()->getManager();
+        $technicien = $em->getRepository("AppBundle:Technicien")->find($id);
 
+        // supprimer une entité
+        if ($technicien != null) {
+            $em->remove($technicien);
+            $em->flush();
+        }
+        return $this->redirectToRoute('pageAdmin');
+    }
 
 
     /*Balise de fin*/

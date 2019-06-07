@@ -127,20 +127,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\TdbController::tdbAction',  '_route' => 'tdb',);
         }
 
+        // technicien_remove_id
+        if (0 === strpos($pathinfo, '/technicien/remove') && preg_match('#^/technicien/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'technicien_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\AdministrateurController::removeTechnicienIdAction',));
+        }
+
         if (0 === strpos($pathinfo, '/page')) {
-            if (0 === strpos($pathinfo, '/pageTechnicien')) {
-                // pageTechnicien
-                if ('/pageTechnicien' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\TdbController::technicienAction',  '_route' => 'pageTechnicien',);
-                }
-
-                // pageTechnicien_insert
-                if ('/pageTechnicienInsert' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\TechnicienFormController::insertTechnicienAction',  '_route' => 'pageTechnicien_insert',);
-                }
-
-            }
-
             // pageVoiture
             if ('/pageVoiture' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\TdbController::voitureAction',  '_route' => 'pageVoiture',);
@@ -182,6 +174,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
+            elseif (0 === strpos($pathinfo, '/pageTechnicien')) {
+                // pageTechnicien_insert
+                if ('/pageTechnicienInsert' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\TechnicienFormController::insertTechnicienAction',  '_route' => 'pageTechnicien_insert',);
+                }
+
+                // pageTechnicien
+                if ('/pageTechnicien' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\TechnicienController::TechnicienViewAction',  '_route' => 'pageTechnicien',);
+                }
+
+            }
+
             // pageAdmin
             if ('/pageAdmin' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\AdministrateurController::GestionnaireViewAction',  '_route' => 'pageAdmin',);
@@ -189,9 +194,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // musicien_remove_id
-        if (0 === strpos($pathinfo, '/musicien/remove') && preg_match('#^/musicien/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, ['_route' => 'musicien_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\AdministrateurController::removeIdAction',));
+        // vehicule_remove_id
+        if (0 === strpos($pathinfo, '/vehicule/remove') && preg_match('#^/vehicule/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'vehicule_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\GestionnaireController::removeVehiculeIdAction',));
+        }
+
+        // operation_remove_id
+        if (0 === strpos($pathinfo, '/operation/remove') && preg_match('#^/operation/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'operation_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\TechnicienFormController::removeOperationIdAction',));
+        }
+
+        // gestionnaire_remove_id
+        if (0 === strpos($pathinfo, '/gestionnaire/remove') && preg_match('#^/gestionnaire/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'gestionnaire_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\AdministrateurController::removeGestionnaireIdAction',));
         }
 
         if ('/' === $pathinfo && !$allow) {

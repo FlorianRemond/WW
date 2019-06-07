@@ -15,7 +15,20 @@ class TdbController extends Controller
     //affiche la page principale
     public function tdbAction(Request $request)
     {
-     return $this->render('tdb.html.twig');
+
+        $em = $this->getDoctrine()->getManager();
+        $operations = $em->getRepository('AppBundle:Operation')->findAll();
+        $vehicules = $em->getRepository('AppBundle:Vehicule')->findAll();
+
+        $em = $this->getDoctrine()->getManager();
+        $response = $this->render('tdb.html.twig', [
+
+            'operations' => $operations,
+            'vehicules' => $vehicules]);
+
+        return $response;
+
+
     }
 
 
@@ -63,6 +76,10 @@ class TdbController extends Controller
     {
         return $this->render('pageOperation.html.twig');
     }
+
+
+
+
 
 /*Balise de fin*/
 }

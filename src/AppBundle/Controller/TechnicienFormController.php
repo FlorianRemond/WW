@@ -38,12 +38,29 @@ class TechnicienFormController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($technicien);
                 $em->flush();
-                return $this->redirectToRoute('tdb');
+                return $this->redirectToRoute('pageAdmin');
             }
         }
         return $this->render('pageTechnicienInsert.html.twig', [
             'formTechnicien' => $form->createView()]);
 
+    }
+
+    /**
+     * @Route("/operation/remove/{id}", name="operation_remove_id")
+     */
+    public function removeOperationIdAction($id)
+    {
+        // récupérer un seul article depuis la base de données
+        $em = $this->getDoctrine()->getManager();
+        $operation = $em->getRepository("AppBundle:Operation")->find($id);
+
+        // supprimer une entité
+        if ($operation != null) {
+            $em->remove($operation);
+            $em->flush();
+        }
+        return $this->redirectToRoute('pageTechnicien');
     }
 
 }

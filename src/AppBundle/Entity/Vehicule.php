@@ -28,6 +28,15 @@ class Vehicule
      */
     private $type;
 
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="probleme", type="string", length=100)
+     */
+    private $probleme;
+
     /**
      * @var \DateTime
      *
@@ -113,6 +122,21 @@ class Vehicule
         $this->operation = $operation;
 
         return $this;
+    }
+    /**
+     * @return string
+     */
+    public function getProbleme()
+    {
+        return $this->probleme;
+    }
+
+    /**
+     * @param string $probleme
+     */
+    public function setProbleme($probleme)
+    {
+        $this->probleme = $probleme;
     }
 
     /**

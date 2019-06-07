@@ -38,7 +38,7 @@ class OperationFormController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($operation);
                 $em->flush();
-                return $this->redirectToRoute('tdb');
+                return $this->redirectToRoute('pageTechnicien');
             }
         }
         return $this->render('pageOperationInsert.html.twig', [
