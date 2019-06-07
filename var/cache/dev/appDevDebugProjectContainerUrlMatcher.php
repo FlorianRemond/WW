@@ -128,25 +128,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/page')) {
-            if (0 === strpos($pathinfo, '/pageGestionnaire')) {
-                // pageGestionnaire
-                if ('/pageGestionnaire' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\TdbController::gestionnaireAction',  '_route' => 'pageGestionnaire',);
-                }
-
-                // pageGestionnaire_insert
-                if ('/pageGestionnaireInsert' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\GestionnaireFormController::insertGestionnaireAction',  '_route' => 'pageGestionnaire_insert',);
-                }
-
-                // pageGestionnaire_Insert
-                if ('/pageGestionnaire/insert' === $pathinfo) {
-                    return array (  '_controller' => 'AppBundle\\Controller\\GestionnaireController::gestionnaireInsertAction',  '_route' => 'pageGestionnaire_Insert',);
-                }
-
-            }
-
-            elseif (0 === strpos($pathinfo, '/pageTechnicien')) {
+            if (0 === strpos($pathinfo, '/pageTechnicien')) {
                 // pageTechnicien
                 if ('/pageTechnicien' === $pathinfo) {
                     return array (  '_controller' => 'AppBundle\\Controller\\TdbController::technicienAction',  '_route' => 'pageTechnicien',);
@@ -178,6 +160,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // pageOperation_insert
                 if ('/pageOperationInsert' === $pathinfo) {
                     return array (  '_controller' => 'AppBundle\\Controller\\OperationFormController::insertOperationAction',  '_route' => 'pageOperation_insert',);
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/pageGestionnaire')) {
+                // pageGestionnaire_insert
+                if ('/pageGestionnaireInsert' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\GestionnaireFormController::insertGestionnaireAction',  '_route' => 'pageGestionnaire_insert',);
+                }
+
+                // pageGestionnaire_Insert
+                if ('/pageGestionnaire/insert' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\GestionnaireController::gestionnaireInsertAction',  '_route' => 'pageGestionnaire_Insert',);
+                }
+
+                // pageGestionnaire
+                if ('/pageGestionnaire' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\GestionnaireController::GestionnaireViewAction',  '_route' => 'pageGestionnaire',);
                 }
 
             }

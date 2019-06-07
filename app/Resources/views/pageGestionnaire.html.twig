@@ -1,5 +1,36 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
 Page Gestionnaire
 
-liste des véhicules <br>
-<a href="pageVehiculeInsert">ajout</a><br>
+    liste des véhicules <br>
+    <table>
+        <tr >
+            <th>Type</th>
+            <th>Date d'achat</th>
+            <th>Opération</th>
+        <tr>
+            {% for key,vehicule in vehicules %}
+
+            <td>{{ vehicule.getType() }}</td>
+            <td>{{ vehicule.getDateAchat('d/m/Y') }}</td>
+            <td>{{ vehicule.getOperation() }}</td>
+
+            <td> <a> Suppression d'un véhicule en base</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <a href="pageVehiculeInsert">ajout</a><br>
+{% endblock %}
+
+
+
+
+
+
+
 
