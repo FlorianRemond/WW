@@ -89,7 +89,7 @@ Page Gestionnaire
             echo "</td>
             <td>";
             // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [0 => "d/m/Y"], "method", false, false, false, 18), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 18), "d/m/Y"), "html", null, true);
             echo "</td>
             <td>";
             // line 19
@@ -108,6 +108,7 @@ Page Gestionnaire
     <br>
 
     <a href=\"pageVehiculeInsert\">ajout</a><br>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -151,7 +152,7 @@ Page Gestionnaire
             {% for key,vehicule in vehicules %}
 
             <td>{{ vehicule.getType() }}</td>
-            <td>{{ vehicule.getDateAchat('d/m/Y') }}</td>
+            <td>{{ vehicule.getDateAchat | date (\"d/m/Y\") }}</td>
             <td>{{ vehicule.getOperation() }}</td>
 
             <td> <a> Suppression d'un véhicule en base</a></td>
@@ -161,6 +162,7 @@ Page Gestionnaire
     <br>
 
     <a href=\"pageVehiculeInsert\">ajout</a><br>
+
 {% endblock %}
 
 

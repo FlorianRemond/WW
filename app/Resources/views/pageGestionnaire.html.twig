@@ -15,7 +15,7 @@ Page Gestionnaire
             {% for key,vehicule in vehicules %}
 
             <td>{{ vehicule.getType() }}</td>
-            <td>{{ vehicule.getDateAchat('d/m/Y') }}</td>
+            <td>{{ vehicule.getDateAchat | date ("d/m/Y") }}</td>
             <td>{{ vehicule.getOperation() }}</td>
 
             <td> <a> Suppression d'un véhicule en base</a></td>
@@ -25,6 +25,7 @@ Page Gestionnaire
     <br>
 
     <a href="pageVehiculeInsert">ajout</a><br>
+
 {% endblock %}
 
 
