@@ -40,11 +40,11 @@ Liste des opérations<br>
 
     <tr>
         {% for key,vehicule in vehicules %}
-        <td>{{ vehicule.getType() }}</td>
-        <td>{{ vehicule.getdateAchat | date ("d/m/Y") }}</td>
+        <td>{{ vehicule.getType()}}</td>
+        <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
         <td>{{ vehicule.getOperation }}</td>
         <td>{{ vehicule.getProbleme() }}</td>
-
+        <td> <a class="btn btn-danger" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
     </tr>
     {% endfor %}
 </table>

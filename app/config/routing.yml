@@ -1,38 +1,38 @@
 app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+  resource: '@AppBundle/Controller/'
+  type: annotation
 
 tdb:
-    resource: '@AppBundle/Controller/TdbController.php'
-    type: annotation
+  resource: '@AppBundle/Controller/TdbController.php'
+  type: annotation
 
 gestionnaire_form:
-        resource: '@AppBundle/Controller/GestionnaireFormController.php'
-        type: annotation
+  resource: '@AppBundle/Controller/GestionnaireFormController.php'
+  type: annotation
 
 gestionnaire:
-        resource: '@AppBundle/Controller/GestionnaireController.php'
-        type: annotation
+  resource: '@AppBundle/Controller/GestionnaireController.php'
+  type: annotation
 
 technicien_form:
-    resource: '@AppBundle/Controller/TechnicienFormController.php'
-    type: annotation
+  resource: '@AppBundle/Controller/TechnicienFormController.php'
+  type: annotation
 
 vehicule_form:
-    resource: '@AppBundle/Controller/VehiculeFormController.php'
-    type: annotation
+  resource: '@AppBundle/Controller/VehiculeFormController.php'
+  type: annotation
 
 operation_form:
-    resource: '@AppBundle/Controller/OperationFormController.php'
-    type: annotation
+  resource: '@AppBundle/Controller/OperationFormController.php'
+  type: annotation
 
 administrateur:
-    resource: '@AppBundle/Controller/AdministrateurController.php'
-    type: annotation
+  resource: '@AppBundle/Controller/AdministrateurController.php'
+  type: annotation
 
 technicien:
-    resource: '@AppBundle/Controller/TechnicienController.php'
-    type: annotation
+  resource: '@AppBundle/Controller/TechnicienController.php'
+  type: annotation
 
 
 

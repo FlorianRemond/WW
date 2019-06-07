@@ -132,6 +132,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, ['_route' => 'technicien_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\AdministrateurController::removeTechnicienIdAction',));
         }
 
+        // vehicule_view_id
+        if (0 === strpos($pathinfo, '/vehicule/view') && preg_match('#^/vehicule/view/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'vehicule_view_id']), array (  '_controller' => 'AppBundle\\Controller\\TdbController::viewVehiculeIdAction',));
+        }
+
+        // vehicule_remove_id
+        if (0 === strpos($pathinfo, '/vehicule/remove') && preg_match('#^/vehicule/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'vehicule_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\GestionnaireController::removeVehiculeIdAction',));
+        }
+
         if (0 === strpos($pathinfo, '/page')) {
             // pageVoiture
             if ('/pageVoiture' === $pathinfo) {
@@ -194,11 +204,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // vehicule_remove_id
-        if (0 === strpos($pathinfo, '/vehicule/remove') && preg_match('#^/vehicule/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, ['_route' => 'vehicule_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\GestionnaireController::removeVehiculeIdAction',));
-        }
-
         // operation_remove_id
         if (0 === strpos($pathinfo, '/operation/remove') && preg_match('#^/operation/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, ['_route' => 'operation_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\TechnicienFormController::removeOperationIdAction',));
@@ -207,6 +212,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // gestionnaire_remove_id
         if (0 === strpos($pathinfo, '/gestionnaire/remove') && preg_match('#^/gestionnaire/remove/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, ['_route' => 'gestionnaire_remove_id']), array (  '_controller' => 'AppBundle\\Controller\\AdministrateurController::removeGestionnaireIdAction',));
+        }
+
+        // operation_edit
+        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'operation_edit']), array (  '_controller' => 'AppBundle\\Controller\\TechnicienController::edit',));
         }
 
         if ('/' === $pathinfo && !$allow) {

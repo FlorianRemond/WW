@@ -1,0 +1,12 @@
+
+
+
+<h1>Le véhicule {{ vehicule.getId() }} est sélectionné : </h1>
+<table>
+    <tr>
+        <td>{{ vehicule.getType() }}</td>
+        <td>{{ vehicule.getDateAchat()| date('d/m/Y') }}</td>
+        <td>{{ vehicule.getOperation() }}</td>
+        <td>{{ vehicule.getProbleme()  }}</td>
+    </tr>
+</table>

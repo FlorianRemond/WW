@@ -12,6 +12,10 @@ Liste des opérations<br>
 
     <tr>
         {% for key,operation in operations %}
+
+
+        <td> <a class="btn btn-danger" href="{{ path('PageOperationInsert', {'id': operation.id} ) }}" role="button"> Sélection d'une opération en base</a>
+
         <td>{{ operation.getSujet() }}</td>
         <td>{{ operation.getDateDebut | date ("d/m/Y") }}</td>
         <td>{{ operation.getDateFin | date ("d/m/Y") }}</td>

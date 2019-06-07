@@ -2,6 +2,8 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Operation;
+use AppBundle\Form\OperationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,8 +30,29 @@ class TechnicienController extends Controller
             'vehicules' => $vehicules]);
 
         return $response;
-
     }
 
+    /**
+     * @Route ("/edit/{id}", name="operation_edit")
+     * @return Response
+     */
+    public function edit(Request $request, Operation $operation)
+    {
+
+        $formBuilder = $this->get('form.factory')->createBuilder(OperationType::class, $operation);
+        $form = $formBuilder->getForm();
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($operation);
+                $em->flush();
+                return $this->redirectToRoute('pageTechnicien');
+            }
+        }
+        return $this->render('pageOperationInsert.html.twig', [
+            'formOperation' => $form->createView()
+        ]);
+    }
 /*Balise de fin*/
 }

@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -27,8 +28,23 @@ class TdbController extends Controller
             'vehicules' => $vehicules]);
 
         return $response;
-
-
+    }
+    /**
+     * @Route("vehicule/view/{id}", name="vehicule_view_id")
+     */
+    public function viewVehiculeIdAction($id)
+    {
+        // récupérer un seul article depuis la base de données
+        $em = $this->getDoctrine()->getManager();
+        $vehicule = $em->getRepository("AppBundle:Vehicule")->find($id);
+        // générer une page d'erreur 404 si l'article n'existe pas
+        if ($vehicule == null) {
+            // le code s'arrêtera ici si on rentre dans le if
+            throw new NotFoundHttpException("L'ID N'EXISTE PAS");
+        }
+        $response = $this->render('pageVehiculeId.html.twig', [
+            'vehicule' => $vehicule ]);
+        return $response;
     }
 
 
@@ -65,7 +81,7 @@ class TdbController extends Controller
      */
     public function voitureAction (Request $request)
     {
-        return $this->render('pageVoiture.html.twig');
+        return $this->render('pageVehiculeId.html.twig');
     }
 
     //Liste des opérations
