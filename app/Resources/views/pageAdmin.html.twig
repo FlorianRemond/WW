@@ -1,37 +1,62 @@
+{% extends 'base.html.twig' %}
 {% block body %}
-Page Administrateur<br>
-Liste des gestionnaires<br>
-    <table>
-            <tr >
-                <th>Nom</th>
-                <th>Prénom</th>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pageAdmin">Administrateur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div align="center" ><h2 >Page Administrateur</h2></div><br>
+
+    <h5 style="text-decoration:underline">Liste des gestionnaires : </h5>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col"> Nom </th>
+            <th scope="col">Prénom</th>
+        </tr>
+        </thead>
+        <tbody>
             <tr>
                 {% for key,gestionnaire in gestionnaires %}
                 <td>{{ gestionnaire.getNom() }}</td>
                 <td>{{ gestionnaire.getPrenom() }}</td>
-            <td> <a class="btn btn-danger" href="{{ path('gestionnaire_remove_id', {'id': gestionnaire.id} ) }}" role="button"> Suppression d'un gestionnaire en base</a></td>
+            <td><a type="button" class="btn btn-outline-warning" href="{{ path('gestionnaire_remove_id', {'id': gestionnaire.id} ) }}">Supprimer</a></td><br>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 <br>
+<a type="button" href="pageGestionnaireInsert"class="btn btn-primary btn-lg btn-block">Ajouter un gestionnaire</a><br>
 
-<a href="pageGestionnaireInsert">  Ajout d'un gestionnaire</a><br>
 
-Liste des techniciens<br>
-    <table>
-        <tr >
-            <th>Nom</th>
-            <th>Prénom</th>
-        <tr>
-            {% for key,technicien in techniciens %}
+<h5 style="text-decoration:underline">Liste des techniciens : </h5><br>
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+            <th scope="col"> Nom </th>
+            <th scope="col">Prénom</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for key,technicien in techniciens %}
             <td>{{ technicien.getNom() }}</td>
             <td>{{ technicien.getPrenom() }}</td>
-            <td> <a class="btn btn-danger" href="{{ path('technicien_remove_id', {'id': technicien.id} ) }}" role="button"> Suppression d'un techncien en base</a></td>
-        </tr>
-        {% endfor %}
+            <td><a type="button" class="btn btn-outline-warning" href="{{ path('technicien_remove_id', {'id': technicien.id} ) }}">Supprimer</a></td><br>
+            </tr>
+                {% endfor %}
+        </tbody>
     </table>
     <br>
-<a href="pageTechnicienInsert">  Ajout d'un technicien tech</a><br>
-<a href="tdb">Retour au tableau de bord</a><br>
-
+    <a type="button" href="pageTechnicienInsert"class="btn btn-primary btn-lg btn-block">Ajouter un technicien</a><br>
 {% endblock %}

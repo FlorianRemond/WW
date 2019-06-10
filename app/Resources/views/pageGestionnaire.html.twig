@@ -1,30 +1,47 @@
-
 {% extends 'base.html.twig' %}
 {% block body %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pageGestionnaire">Gestionnaire</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-Page Gestionnaire
+    <div align="center" ><h2 >Page Gestionnaire</h2></div><br>
 
-    Liste des véhicules <br>
-    <table>
-        <tr >
-            <th>Type</th>
-            <th>Date d'achat</th>
-            <th>Opération</th>
-            <th>Problème</th>
+    <h5 style="text-decoration:underline">Liste des véhicules : </h5><br>
+    <table class="table table-hover">
+        <thead>
         <tr>
-            {% for key,vehicule in vehicules %}
-            <td>{{ vehicule.getType() }}</td>
-            <td>{{ vehicule.getDateAchat | date ("d/m/Y") }}</td>
-            <td>{{ vehicule.getOperation() }}</td>
-            <td>{{ vehicule.getProbleme() }}</td>
-            <td> <a class="btn btn-danger" href="{{ path('vehicule_remove_id', {'id': vehicule.id} ) }}" role="button"> Suppression d'un véhicule en base</a></td>
+            <th scope="col">Type</th>
+            <th scope="col">Date d'achat du véhicule</th>
+            <th scope="col">Opération en cours</th>
+            <th scope="col">Problème</th>
         </tr>
+        </thead>
+
+        <tbody>
+        {% for key,vehicule in vehicules %}
+            <tr class="table-secondary">
+                <td>{{ vehicule.getType()}}</td>
+                <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
+                <td>{{ vehicule.getOperation }}</td>
+                <td>{{ vehicule.getProbleme() }}</td>
+                <td> <a class="btn btn-danger" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
+            </tr>
         {% endfor %}
+        </tbody>
     </table>
     <br>
-    <a href="pageVehiculeInsert">ajout</a><br>
-    <a href="tdb">  Retour au tableau de bord</a><br>
+    <a type="button" href="pageVehiculeInsert"class="btn btn-primary btn-lg btn-block">Ajouter un véhicule</a><br>
+
 {% endblock %}
 
 

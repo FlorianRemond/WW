@@ -1,6 +1,5 @@
-
-
-
+{% extends 'base.html.twig' %}
+{% block body %}
 <h1>Le véhicule {{ vehicule.getId() }} est sélectionné : </h1>
 <table>
     <tr>
@@ -10,3 +9,4 @@
         <td>{{ vehicule.getProbleme()  }}</td>
     </tr>
 </table>
+{% endblock %}

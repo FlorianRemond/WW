@@ -1,21 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
 Page Technicien
 
 Liste des opérations<br>
 <table>
     <tr >
-        <th>Sujet</th>
-        <th>Date de début d'intervention</th>
-        <th>Date de fin d'intervention</th>
-        <th>Description de l'intervention</th>
-        <th>Pièce</th>
-        <th>Note du technicien</th>
+        <td>Sujet</td>
+        <td>Date de début d'intervention</td>
+        <td>Date de fin d'intervention</td>
+        <td>Description de l'intervention</td>
+        <td>Pièce</td>
+        <td>Note du technicien</td>
 
     <tr>
         {% for key,operation in operations %}
-
-
-        <td> <a class="btn btn-danger" href="{{ path('PageOperationInsert', {'id': operation.id} ) }}" role="button"> Sélection d'une opération en base</a>
-
         <td>{{ operation.getSujet() }}</td>
         <td>{{ operation.getDateDebut | date ("d/m/Y") }}</td>
         <td>{{ operation.getDateFin | date ("d/m/Y") }}</td>
@@ -23,6 +21,7 @@ Liste des opérations<br>
         <td>{{ operation.getPiece() }}</td>
         <td>{{ operation.getNoteTech() }}</td>
         <td> <a class="btn btn-danger" href="{{ path('operation_remove_id', {'id': operation.id} ) }}" role="button"> Suppression d'une opération en base</a></td>
+        <td><a class="btn btn-danger" href="{{ path('operation_edit', {'id': operation.id} ) }}" role="button"> Sélection d'une opération en base</a>
 
     </tr>
     {% endfor %}
@@ -47,4 +46,4 @@ Liste des opérations<br>
 </table>
 
 <a href="tdb"> Retour au tableau de bord</a><br>
-
+{% endblock %}

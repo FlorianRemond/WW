@@ -1,51 +1,77 @@
-Page Tableau de bord<br>
+{% extends 'base.html.twig' %}
+  {% block body %}
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-<a href="pageAdmin">Lien vers page administrateur</a><br>
-<a href="pageGestionnaire">Lien vers page gestionnaire</a><br>
-<a href="pageTechnicien">Lien vers page technicien</a><br>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pageAdmin">Administrateur</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pageGestionnaire">Gestionnaire</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="pageTechnicien">Technicien</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
 
+      <div align="center"><h2>Tableau de bord</h2></div><br>
+      <h5>Graphique des opérations : </h5><br>
+      <h5>Liste des opérations : </h5><br>
 
-Graphique des opérations<br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Sujet</th>
+                    <th scope="col">Date de début d'intervention</th>
+                    <th scope="col">Date de fin d'intervention</th>
+                    <th scope="col">Description de l'intervention</th>
+                    <th scope="col">Pièce</th>
+                    <th scope="col">Note du technicien</th>
+                </tr>
+            </thead>
 
-Liste des opérations<br>
-<table>
-    <tr >
-        <th>Sujet</th>
-        <th>Date de début d'intervention</th>
-        <th>Date de fin d'intervention</th>
-        <th>Description de l'intervention</th>
-        <th>Pièce</th>
-        <th>Note du technicien</th>
+            <tbody>
+            {% for key,operation in operations %}
+                <tr class="table-active">
+                    <td>{{ operation.getSujet() }}</td>
+                    <td>{{ operation.getDateDebut | date ("d/m/Y") }}</td>
+                    <td>{{ operation.getDateFin | date ("d/m/Y") }}</td>
+                    <td>{{ operation.getDescription() }}</td>
+                    <td>{{ operation.getPiece() }}</td>
+                    <td>{{ operation.getNoteTech() }}</td>
+                 </tr>
+            {% endfor %}
+           </tbody>
+        </table>
+      <br>
 
-    <tr>
-        {% for key,operation in operations %}
-        <td>{{ operation.getSujet() }}</td>
-        <td>{{ operation.getDateDebut | date ("d/m/Y") }}</td>
-        <td>{{ operation.getDateFin | date ("d/m/Y") }}</td>
-        <td>{{ operation.getDescription() }}</td>
-        <td>{{ operation.getPiece() }}</td>
-        <td>{{ operation.getNoteTech() }}</td>
-    </tr>
-    {% endfor %}
-</table>
-<br>
+      <h5>Liste des véhicules : </h5><br>
+    <table class="table table-hover">
+      <thead>
+         <tr>
+          <th scope="col">Type</th>
+          <th scope="col">Date d'achat du véhicule</th>
+          <th scope="col">Opération en cours</th>
+          <th scope="col">Problème</th>
+         </tr>
+      </thead>
 
-
-<table>
-    <tr >
-        <th>Type</th>
-        <th>Date d'achat du véhicule</th>
-        <th>Opération en cours </th>
-        <th>Problème</th>
-
-    <tr>
-        {% for key,vehicule in vehicules %}
-        <td>{{ vehicule.getType()}}</td>
-        <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
-        <td>{{ vehicule.getOperation }}</td>
-        <td>{{ vehicule.getProbleme() }}</td>
-        <td> <a class="btn btn-danger" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
-    </tr>
-    {% endfor %}
-</table>
-
+      <tbody>
+          {% for key,vehicule in vehicules %}
+          <tr class="table-secondary">
+              <td>{{ vehicule.getType()}}</td>
+              <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
+              <td>{{ vehicule.getOperation }}</td>
+              <td>{{ vehicule.getProbleme() }}</td>
+              <td> <a class="btn btn-danger" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  {% endblock %}
