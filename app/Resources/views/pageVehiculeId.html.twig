@@ -1,12 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+
 <h1>Le véhicule {{ vehicule.getId() }} est sélectionné : </h1>
-<table>
-    <tr>
-        <td>{{ vehicule.getType() }}</td>
-        <td>{{ vehicule.getDateAchat()| date('d/m/Y') }}</td>
-        <td>{{ vehicule.getOperation() }}</td>
-        <td>{{ vehicule.getProbleme()  }}</td>
-    </tr>
-</table>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Date d'achat</th>
+            <th scope="col">Opération</th>
+            <th scope="col">Problème</th>
+        </tr>
+        <tr class="table-light">
+            <th scope="row">{{ vehicule.getType() }}</th>
+            <td>C{{ vehicule.getDateAchat()| date('d/m/Y') }}</td>
+            <td>{{ vehicule.getOperation() }}</td>
+            <td>{{ vehicule.getProbleme()  }}</td>
+        </tr>
 {% endblock %}

@@ -66,7 +66,6 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
 
         // line 3
         echo "    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
@@ -80,7 +79,18 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
     </nav>
 
     <div align=\"center\" ><h2 >Page Gestionnaire</h2></div><br>
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageVehiculeInsert\">Ajout d'un véhicule</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+
+    <br>
     <h5 style=\"text-decoration:underline\">Liste des véhicules : </h5><br>
     <table class=\"table table-hover\">
         <thead>
@@ -93,46 +103,49 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         </thead>
 
         <tbody>
+        <tr>
         ";
-        // line 31
+        // line 42
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 31, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 42, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["vehicule"]) {
-            // line 32
-            echo "            <tr class=\"table-secondary\">
-                <td>";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 33), "html", null, true);
+            // line 43
+            echo "            <td>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 43), "html", null, true);
             echo "</td>
-                <td>";
-            // line 34
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 34), "d/m/Y"), "html", null, true);
+            <td>";
+            // line 44
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 44), "d/m/Y"), "html", null, true);
             echo "</td>
-                <td>";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 35), "html", null, true);
+            <td>";
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
-                <td>";
-            // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 36), "html", null, true);
+            <td>";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 46), "html", null, true);
             echo "</td>
-                <td> <a class=\"btn btn-danger\" href=\"";
-            // line 37
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 37)]), "html", null, true);
-            echo "\" role=\"button\"> Sélectionner ce véhicule</a></td>
+            <td><a type=\"button\" class=\"btn btn-outline-info\" href=\"";
+            // line 47
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 47)]), "html", null, true);
+            echo "\">Visualiser un véhicule</a></td>
+            <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"";
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 48)]), "html", null, true);
+            echo "\">Suppression d'un véhicule</a></td>
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['vehicule'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 51
         echo "        </tbody>
     </table>
     <br>
-    <a type=\"button\" href=\"pageVehiculeInsert\"class=\"btn btn-primary btn-lg btn-block\">Ajouter un véhicule</a><br>
-
-";
+    </table>
+    <br>
+   ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -153,7 +166,7 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
 
     public function getDebugInfo()
     {
-        return array (  130 => 40,  121 => 37,  117 => 36,  113 => 35,  109 => 34,  105 => 33,  102 => 32,  98 => 31,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  143 => 51,  134 => 48,  130 => 47,  126 => 46,  122 => 45,  118 => 44,  113 => 43,  109 => 42,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -161,7 +174,6 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
@@ -175,7 +187,18 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
     </nav>
 
     <div align=\"center\" ><h2 >Page Gestionnaire</h2></div><br>
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageVehiculeInsert\">Ajout d'un véhicule</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+
+    <br>
     <h5 style=\"text-decoration:underline\">Liste des véhicules : </h5><br>
     <table class=\"table table-hover\">
         <thead>
@@ -188,21 +211,22 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         </thead>
 
         <tbody>
+        <tr>
         {% for key,vehicule in vehicules %}
-            <tr class=\"table-secondary\">
-                <td>{{ vehicule.getType()}}</td>
-                <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
-                <td>{{ vehicule.getOperation }}</td>
-                <td>{{ vehicule.getProbleme() }}</td>
-                <td> <a class=\"btn btn-danger\" href=\"{{ path('vehicule_view_id', {'id': vehicule.id} ) }}\" role=\"button\"> Sélectionner ce véhicule</a></td>
+            <td>{{ vehicule.getType()}}</td>
+            <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
+            <td>{{ vehicule.getOperation }}</td>
+            <td>{{ vehicule.getProbleme() }}</td>
+            <td><a type=\"button\" class=\"btn btn-outline-info\" href=\"{{ path('vehicule_view_id', {'id': vehicule.id} ) }}\">Visualiser un véhicule</a></td>
+            <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"{{ path('vehicule_remove_id', {'id': vehicule.id} ) }}\">Suppression d'un véhicule</a></td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
     <br>
-    <a type=\"button\" href=\"pageVehiculeInsert\"class=\"btn btn-primary btn-lg btn-block\">Ajouter un véhicule</a><br>
-
-{% endblock %}
+    </table>
+    <br>
+   {% endblock %}
 
 
 

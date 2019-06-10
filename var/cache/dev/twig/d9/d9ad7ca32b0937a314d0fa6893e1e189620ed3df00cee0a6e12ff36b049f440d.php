@@ -67,26 +67,36 @@ class __TwigTemplate_406645ad55836cb372b4768fee91afc5012963b25a9ddc05dbbb14e1d80
         // line 3
         echo " ";
         // line 4
-        echo "
-";
-        // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 5, $this->source); })()), 'form_start');
-        echo "
-    ";
-        // line 6
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 6, $this->source); })()), "nom", [], "any", false, false, false, 6), 'row');
-        echo "
-    ";
-        // line 7
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 7, $this->source); })()), "prenom", [], "any", false, false, false, 7), 'row');
-        echo "
+        echo "    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 
-    <input type=\"submit\" value = \"Enregistrer le gestionnaire\" />
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 ";
-        // line 10
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 10, $this->source); })()), 'form_end');
+        // line 17
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 17, $this->source); })()), 'form_start');
         echo "
-
+      ";
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 18, $this->source); })()), "nom", [], "any", false, false, false, 18), 'row');
+        echo "
+      ";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 19, $this->source); })()), "prenom", [], "any", false, false, false, 19), 'row');
+        echo "
+      <input type=\"submit\" value = \"Enregistrer le gestionnaire\" />
+";
+        // line 21
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGestionnaire"]) || array_key_exists("formGestionnaire", $context) ? $context["formGestionnaire"] : (function () { throw new RuntimeError('Variable "formGestionnaire" does not exist.', 21, $this->source); })()), 'form_end');
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,7 +118,7 @@ class __TwigTemplate_406645ad55836cb372b4768fee91afc5012963b25a9ddc05dbbb14e1d80
 
     public function getDebugInfo()
     {
-        return array (  87 => 10,  81 => 7,  77 => 6,  73 => 5,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  98 => 21,  93 => 19,  89 => 18,  85 => 17,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -116,14 +126,24 @@ class __TwigTemplate_406645ad55836cb372b4768fee91afc5012963b25a9ddc05dbbb14e1d80
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
  {#affichage des champs du formulaire un par un grace à la variable formGestionnaire#}
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 {{ form_start (formGestionnaire) }}
-    {{ form_row (formGestionnaire.nom) }}
-    {{ form_row (formGestionnaire.prenom) }}
-
-    <input type=\"submit\" value = \"Enregistrer le gestionnaire\" />
+      {{ form_row (formGestionnaire.nom) }}
+      {{ form_row (formGestionnaire.prenom) }}
+      <input type=\"submit\" value = \"Enregistrer le gestionnaire\" />
 {{ form_end (formGestionnaire) }}
-
 {% endblock %}
 ", "pageGestionnaireInsert.html.twig", "C:\\xampp\\htdocs\\php\\WW\\WW\\app\\Resources\\views\\pageGestionnaireInsert.html.twig");
     }

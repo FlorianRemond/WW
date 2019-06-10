@@ -67,20 +67,36 @@ class __TwigTemplate_6ec062db6f0d1465849a1b02cb3ca2da7189cb5e3b15ef37bbf7f538ad9
         // line 3
         echo " ";
         // line 4
-        echo "
+        echo "    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 ";
-        // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formTechnicien"]) || array_key_exists("formTechnicien", $context) ? $context["formTechnicien"] : (function () { throw new RuntimeError('Variable "formTechnicien" does not exist.', 5, $this->source); })()), 'form_start');
+        // line 17
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formTechnicien"]) || array_key_exists("formTechnicien", $context) ? $context["formTechnicien"] : (function () { throw new RuntimeError('Variable "formTechnicien" does not exist.', 17, $this->source); })()), 'form_start');
         echo "
     ";
-        // line 6
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formTechnicien"]) || array_key_exists("formTechnicien", $context) ? $context["formTechnicien"] : (function () { throw new RuntimeError('Variable "formTechnicien" does not exist.', 6, $this->source); })()), "nom", [], "any", false, false, false, 6), 'row');
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formTechnicien"]) || array_key_exists("formTechnicien", $context) ? $context["formTechnicien"] : (function () { throw new RuntimeError('Variable "formTechnicien" does not exist.', 18, $this->source); })()), "nom", [], "any", false, false, false, 18), 'row');
+        echo "
+    ";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formTechnicien"]) || array_key_exists("formTechnicien", $context) ? $context["formTechnicien"] : (function () { throw new RuntimeError('Variable "formTechnicien" does not exist.', 19, $this->source); })()), "prenom", [], "any", false, false, false, 19), 'row');
         echo "
 
     <input type=\"submit\" value = \"Enregistrer le technicien\" />
 ";
-        // line 9
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formTechnicien"]) || array_key_exists("formTechnicien", $context) ? $context["formTechnicien"] : (function () { throw new RuntimeError('Variable "formTechnicien" does not exist.', 9, $this->source); })()), 'form_end');
+        // line 22
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formTechnicien"]) || array_key_exists("formTechnicien", $context) ? $context["formTechnicien"] : (function () { throw new RuntimeError('Variable "formTechnicien" does not exist.', 22, $this->source); })()), 'form_end');
         echo "
 
 ";
@@ -104,7 +120,7 @@ class __TwigTemplate_6ec062db6f0d1465849a1b02cb3ca2da7189cb5e3b15ef37bbf7f538ad9
 
     public function getDebugInfo()
     {
-        return array (  83 => 9,  77 => 6,  73 => 5,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  99 => 22,  93 => 19,  89 => 18,  85 => 17,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -112,9 +128,22 @@ class __TwigTemplate_6ec062db6f0d1465849a1b02cb3ca2da7189cb5e3b15ef37bbf7f538ad9
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
  {#affichage des champs du formulaire un par un grace à la variable formTechnicien#}
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 {{ form_start (formTechnicien) }}
     {{ form_row (formTechnicien.nom) }}
+    {{ form_row (formTechnicien.prenom) }}
 
     <input type=\"submit\" value = \"Enregistrer le technicien\" />
 {{ form_end (formTechnicien) }}

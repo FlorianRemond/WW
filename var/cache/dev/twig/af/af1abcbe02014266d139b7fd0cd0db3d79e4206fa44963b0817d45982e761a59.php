@@ -65,106 +65,145 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo "Page Technicien
+        echo "    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 
-Liste des opérations<br>
-<table>
-    <tr >
-        <td>Sujet</td>
-        <td>Date de début d'intervention</td>
-        <td>Date de fin d'intervention</td>
-        <td>Description de l'intervention</td>
-        <td>Pièce</td>
-        <td>Note du technicien</td>
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <tr>
+    <div align=\"center\" ><h2 >Page Technicien</h2></div><br>
+
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
+            <ul class=\"navbar-nav mr-auto\">
+
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageOperationInsert\">Ajout d'une opération</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h5 style=\"text-decoration:underline\">Liste des opérations : </h5><br>
+    <table class=\"table table-hover\">
+        <thead>
+        <tr>
+            <th scope=\"col\">Sujet</th>
+            <th scope=\"col\">Date de début d'intervention</th>
+            <th scope=\"col\">Date de fin d'intervention</th>
+            <th scope=\"col\">Description de l'intervention</th>
+            <th scope=\"col\">Pièce</th>
+            <th scope=\"col\">Note du technicien</th>
+        </tr>
+        </thead>
+
+        <tbody>
         ";
-        // line 16
+        // line 44
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["operations"]) || array_key_exists("operations", $context) ? $context["operations"] : (function () { throw new RuntimeError('Variable "operations" does not exist.', 16, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["operations"]) || array_key_exists("operations", $context) ? $context["operations"] : (function () { throw new RuntimeError('Variable "operations" does not exist.', 44, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["operation"]) {
-            // line 17
-            echo "        <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getSujet", [], "method", false, false, false, 17), "html", null, true);
+            // line 45
+            echo "                <td>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getSujet", [], "method", false, false, false, 45), "html", null, true);
             echo "</td>
-        <td>";
-            // line 18
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateDebut", [], "any", false, false, false, 18), "d/m/Y"), "html", null, true);
+                <td>";
+            // line 46
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateDebut", [], "any", false, false, false, 46), "d/m/Y"), "html", null, true);
             echo "</td>
-        <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateFin", [], "any", false, false, false, 19), "d/m/Y"), "html", null, true);
+                <td>";
+            // line 47
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateFin", [], "any", false, false, false, 47), "d/m/Y"), "html", null, true);
             echo "</td>
-        <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDescription", [], "method", false, false, false, 20), "html", null, true);
+                <td>";
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDescription", [], "method", false, false, false, 48), "html", null, true);
             echo "</td>
-        <td>";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getPiece", [], "method", false, false, false, 21), "html", null, true);
+                <td>";
+            // line 49
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getPiece", [], "method", false, false, false, 49), "html", null, true);
             echo "</td>
-        <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getNoteTech", [], "method", false, false, false, 22), "html", null, true);
+                <td>";
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getNoteTech", [], "method", false, false, false, 50), "html", null, true);
             echo "</td>
-        <td> <a class=\"btn btn-danger\" href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("operation_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 23)]), "html", null, true);
-            echo "\" role=\"button\"> Suppression d'une opération en base</a></td>
-        <td><a class=\"btn btn-danger\" href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("operation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 24)]), "html", null, true);
-            echo "\" role=\"button\"> Sélection d'une opération en base</a>
-
-    </tr>
-    ";
+                <td><a type=\"button\" class=\"btn btn-outline-info\" href=\"";
+            // line 51
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("operation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 51)]), "html", null, true);
+            echo "\">Sélection d'une opération</a></td>
+                <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"";
+            // line 52
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("operation_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 52)]), "html", null, true);
+            echo "\">Suppression d'une opération</a></td>
+            </tr>
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['operation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
-        echo "</table>
+        // line 55
+        echo "        </tbody>
+    </table>
+    <br>
+</table>
 <br>
-<a href=\"pageOperationInsert\">ajout</a><br>
 
-<table>
-    <tr >
-        <th>Type</th>
-        <th>Date d'achat du véhicule</th>
-        <th>Opération en cours </th>
-        <th>Problème</th>
-    <tr>
+    <h5 style=\"text-decoration:underline\">Liste des véhicules : </h5><br>
+    <table class=\"table table-hover\">
+        <thead>
+             <tr>
+                <th scope=\"col\">Type</th>
+                <th scope=\"col\">Date d'achat du véhicule</th>
+                <th scope=\"col\">Opération en cours</th>
+                <th scope=\"col\">Problème</th>
+             </tr>
+        </thead>
+
+        <tbody>
         ";
-        // line 39
+        // line 73
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 39, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 73, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["vehicule"]) {
-            // line 40
-            echo "        <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 40), "html", null, true);
+            // line 74
+            echo "            <tr class=\"table-secondary\">
+                <td>";
+            // line 75
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 75), "html", null, true);
             echo "</td>
-        <td>";
-            // line 41
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getdateAchat", [], "any", false, false, false, 41), "d/m/Y"), "html", null, true);
+                <td>";
+            // line 76
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 76), "d/m/Y"), "html", null, true);
             echo "</td>
-        <td>";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 42), "html", null, true);
+                <td>";
+            // line 77
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 77), "html", null, true);
             echo "</td>
-        <td>";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 43), "html", null, true);
+                <td>";
+            // line 78
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 78), "html", null, true);
             echo "</td>
-    </tr>
-    ";
+                <td> <a class=\"btn btn-danger\" href=\"";
+            // line 79
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 79)]), "html", null, true);
+            echo "\" role=\"button\"> Sélectionner ce véhicule</a></td>
+            </tr>
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['vehicule'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
-        echo "</table>
-
-<a href=\"tdb\"> Retour au tableau de bord</a><br>
+        // line 82
+        echo "        </tbody>
+    </table>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -186,59 +225,94 @@ Liste des opérations<br>
 
     public function getDebugInfo()
     {
-        return array (  165 => 46,  156 => 43,  152 => 42,  148 => 41,  143 => 40,  139 => 39,  126 => 28,  116 => 24,  112 => 23,  108 => 22,  104 => 21,  100 => 20,  96 => 19,  92 => 18,  87 => 17,  83 => 16,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  205 => 82,  196 => 79,  192 => 78,  188 => 77,  184 => 76,  180 => 75,  177 => 74,  173 => 73,  153 => 55,  144 => 52,  140 => 51,  136 => 50,  132 => 49,  128 => 48,  124 => 47,  120 => 46,  115 => 45,  111 => 44,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
-Page Technicien
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 
-Liste des opérations<br>
-<table>
-    <tr >
-        <td>Sujet</td>
-        <td>Date de début d'intervention</td>
-        <td>Date de fin d'intervention</td>
-        <td>Description de l'intervention</td>
-        <td>Pièce</td>
-        <td>Note du technicien</td>
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <tr>
+    <div align=\"center\" ><h2 >Page Technicien</h2></div><br>
+
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
+            <ul class=\"navbar-nav mr-auto\">
+
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageOperationInsert\">Ajout d'une opération</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h5 style=\"text-decoration:underline\">Liste des opérations : </h5><br>
+    <table class=\"table table-hover\">
+        <thead>
+        <tr>
+            <th scope=\"col\">Sujet</th>
+            <th scope=\"col\">Date de début d'intervention</th>
+            <th scope=\"col\">Date de fin d'intervention</th>
+            <th scope=\"col\">Description de l'intervention</th>
+            <th scope=\"col\">Pièce</th>
+            <th scope=\"col\">Note du technicien</th>
+        </tr>
+        </thead>
+
+        <tbody>
         {% for key,operation in operations %}
-        <td>{{ operation.getSujet() }}</td>
-        <td>{{ operation.getDateDebut | date (\"d/m/Y\") }}</td>
-        <td>{{ operation.getDateFin | date (\"d/m/Y\") }}</td>
-        <td>{{ operation.getDescription() }}</td>
-        <td>{{ operation.getPiece() }}</td>
-        <td>{{ operation.getNoteTech() }}</td>
-        <td> <a class=\"btn btn-danger\" href=\"{{ path('operation_remove_id', {'id': operation.id} ) }}\" role=\"button\"> Suppression d'une opération en base</a></td>
-        <td><a class=\"btn btn-danger\" href=\"{{ path('operation_edit', {'id': operation.id} ) }}\" role=\"button\"> Sélection d'une opération en base</a>
-
-    </tr>
-    {% endfor %}
+                <td>{{ operation.getSujet() }}</td>
+                <td>{{ operation.getDateDebut | date (\"d/m/Y\") }}</td>
+                <td>{{ operation.getDateFin | date (\"d/m/Y\") }}</td>
+                <td>{{ operation.getDescription() }}</td>
+                <td>{{ operation.getPiece() }}</td>
+                <td>{{ operation.getNoteTech() }}</td>
+                <td><a type=\"button\" class=\"btn btn-outline-info\" href=\"{{ path('operation_edit', {'id': operation.id} ) }}\">Sélection d'une opération</a></td>
+                <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"{{ path('operation_remove_id', {'id': operation.id} ) }}\">Suppression d'une opération</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br>
 </table>
 <br>
-<a href=\"pageOperationInsert\">ajout</a><br>
 
-<table>
-    <tr >
-        <th>Type</th>
-        <th>Date d'achat du véhicule</th>
-        <th>Opération en cours </th>
-        <th>Problème</th>
-    <tr>
+    <h5 style=\"text-decoration:underline\">Liste des véhicules : </h5><br>
+    <table class=\"table table-hover\">
+        <thead>
+             <tr>
+                <th scope=\"col\">Type</th>
+                <th scope=\"col\">Date d'achat du véhicule</th>
+                <th scope=\"col\">Opération en cours</th>
+                <th scope=\"col\">Problème</th>
+             </tr>
+        </thead>
+
+        <tbody>
         {% for key,vehicule in vehicules %}
-        <td>{{ vehicule.getType() }}</td>
-        <td>{{ vehicule.getdateAchat | date (\"d/m/Y\") }}</td>
-        <td>{{ vehicule.getOperation }}</td>
-        <td>{{ vehicule.getProbleme() }}</td>
-    </tr>
-    {% endfor %}
-</table>
-
-<a href=\"tdb\"> Retour au tableau de bord</a><br>
+            <tr class=\"table-secondary\">
+                <td>{{ vehicule.getType()}}</td>
+                <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
+                <td>{{ vehicule.getOperation }}</td>
+                <td>{{ vehicule.getProbleme() }}</td>
+                <td> <a class=\"btn btn-danger\" href=\"{{ path('vehicule_view_id', {'id': vehicule.id} ) }}\" role=\"button\"> Sélectionner ce véhicule</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
 ", "pageTechnicien.html.twig", "C:\\xampp\\htdocs\\php\\WW\\WW\\app\\Resources\\views\\pageTechnicien.html.twig");
     }

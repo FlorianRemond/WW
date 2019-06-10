@@ -5,6 +5,8 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class VehiculeType extends AbstractType
 {
@@ -15,8 +17,8 @@ class VehiculeType extends AbstractType
     {
         $builder
             ->add('type')
-            ->add('dateAchat')
-            ->add('operation')
+            ->add('dateAchat',DateTimeType::class)
+            ->add('operation', TextareaType::class)
             ->add('probleme');
     }
 

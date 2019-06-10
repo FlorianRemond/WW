@@ -1,12 +1,22 @@
 {% extends 'base.html.twig' %}
 {% block body %}
  {#affichage des champs du formulaire un par un grace à la variable formGestionnaire#}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pageAdmin">Administrateur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 {{ form_start (formGestionnaire) }}
-    {{ form_row (formGestionnaire.nom) }}
-    {{ form_row (formGestionnaire.prenom) }}
-
-    <input type="submit" value = "Enregistrer le gestionnaire" />
+      {{ form_row (formGestionnaire.nom) }}
+      {{ form_row (formGestionnaire.prenom) }}
+      <input type="submit" value = "Enregistrer le gestionnaire" />
 {{ form_end (formGestionnaire) }}
-
 {% endblock %}

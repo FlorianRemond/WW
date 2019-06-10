@@ -67,27 +67,43 @@ class __TwigTemplate_07eeb6a707de3fed04af1cc3da6c03c028120b48c033d82f9bd79b8304d
         // line 3
         echo " ";
         // line 4
-        echo "
+        echo "    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 ";
-        // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 5, $this->source); })()), 'form_start');
+        // line 17
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 17, $this->source); })()), 'form_start');
         echo "
     ";
-        // line 6
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 6, $this->source); })()), "type", [], "any", false, false, false, 6), 'row');
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 18, $this->source); })()), "type", [], "any", false, false, false, 18), 'row');
         echo "
     ";
-        // line 7
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 7, $this->source); })()), "dateAchat", [], "any", false, false, false, 7), 'row');
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 19, $this->source); })()), "dateAchat", [], "any", false, false, false, 19), 'row');
         echo "
     ";
-        // line 8
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 8, $this->source); })()), "operation", [], "any", false, false, false, 8), 'row');
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 20, $this->source); })()), "operation", [], "any", false, false, false, 20), 'row');
+        echo "
+    ";
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 21, $this->source); })()), "probleme", [], "any", false, false, false, 21), 'row');
         echo "
     <input type=\"submit\" value = \"Enregistrer le véhicule\" />
 ";
-        // line 10
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 10, $this->source); })()), 'form_end');
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formVehicule"]) || array_key_exists("formVehicule", $context) ? $context["formVehicule"] : (function () { throw new RuntimeError('Variable "formVehicule" does not exist.', 23, $this->source); })()), 'form_end');
         echo "
 
 ";
@@ -111,7 +127,7 @@ class __TwigTemplate_07eeb6a707de3fed04af1cc3da6c03c028120b48c033d82f9bd79b8304d
 
     public function getDebugInfo()
     {
-        return array (  90 => 10,  85 => 8,  81 => 7,  77 => 6,  73 => 5,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  106 => 23,  101 => 21,  97 => 20,  93 => 19,  89 => 18,  85 => 17,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -119,11 +135,24 @@ class __TwigTemplate_07eeb6a707de3fed04af1cc3da6c03c028120b48c033d82f9bd79b8304d
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
  {#affichage des champs du formulaire un par un grace à la variable formTechnicien#}
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 {{ form_start (formVehicule) }}
     {{ form_row (formVehicule.type) }}
     {{ form_row (formVehicule.dateAchat) }}
     {{ form_row (formVehicule.operation) }}
+    {{ form_row (formVehicule.probleme) }}
     <input type=\"submit\" value = \"Enregistrer le véhicule\" />
 {{ form_end (formVehicule) }}
 

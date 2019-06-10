@@ -1,49 +1,84 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-Page Technicien
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-Liste des opérations<br>
-<table>
-    <tr >
-        <td>Sujet</td>
-        <td>Date de début d'intervention</td>
-        <td>Date de fin d'intervention</td>
-        <td>Description de l'intervention</td>
-        <td>Pièce</td>
-        <td>Note du technicien</td>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pageTechnicien">Technicien</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <tr>
+    <div align="center" ><h2 >Page Technicien</h2></div><br>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="pageOperationInsert">Ajout d'une opération</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h5 style="text-decoration:underline">Liste des opérations : </h5><br>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Sujet</th>
+            <th scope="col">Date de début d'intervention</th>
+            <th scope="col">Date de fin d'intervention</th>
+            <th scope="col">Description de l'intervention</th>
+            <th scope="col">Pièce</th>
+            <th scope="col">Note du technicien</th>
+        </tr>
+        </thead>
+
+        <tbody>
         {% for key,operation in operations %}
-        <td>{{ operation.getSujet() }}</td>
-        <td>{{ operation.getDateDebut | date ("d/m/Y") }}</td>
-        <td>{{ operation.getDateFin | date ("d/m/Y") }}</td>
-        <td>{{ operation.getDescription() }}</td>
-        <td>{{ operation.getPiece() }}</td>
-        <td>{{ operation.getNoteTech() }}</td>
-        <td> <a class="btn btn-danger" href="{{ path('operation_remove_id', {'id': operation.id} ) }}" role="button"> Suppression d'une opération en base</a></td>
-        <td><a class="btn btn-danger" href="{{ path('operation_edit', {'id': operation.id} ) }}" role="button"> Sélection d'une opération en base</a>
-
-    </tr>
-    {% endfor %}
+                <td>{{ operation.getSujet() }}</td>
+                <td>{{ operation.getDateDebut | date ("d/m/Y") }}</td>
+                <td>{{ operation.getDateFin | date ("d/m/Y") }}</td>
+                <td>{{ operation.getDescription() }}</td>
+                <td>{{ operation.getPiece() }}</td>
+                <td>{{ operation.getNoteTech() }}</td>
+                <td><a type="button" class="btn btn-outline-info" href="{{ path('operation_edit', {'id': operation.id} ) }}">Sélection d'une opération</a></td>
+                <td><a type="button" class="btn btn-outline-warning" href="{{ path('operation_remove_id', {'id': operation.id} ) }}">Suppression d'une opération</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br>
 </table>
 <br>
-<a href="pageOperationInsert">ajout</a><br>
 
-<table>
-    <tr >
-        <th>Type</th>
-        <th>Date d'achat du véhicule</th>
-        <th>Opération en cours </th>
-        <th>Problème</th>
-    <tr>
+    <h5 style="text-decoration:underline">Liste des véhicules : </h5><br>
+    <table class="table table-hover">
+        <thead>
+             <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Date d'achat du véhicule</th>
+                <th scope="col">Opération en cours</th>
+                <th scope="col">Problème</th>
+             </tr>
+        </thead>
+
+        <tbody>
         {% for key,vehicule in vehicules %}
-        <td>{{ vehicule.getType() }}</td>
-        <td>{{ vehicule.getdateAchat | date ("d/m/Y") }}</td>
-        <td>{{ vehicule.getOperation }}</td>
-        <td>{{ vehicule.getProbleme() }}</td>
-    </tr>
-    {% endfor %}
-</table>
-
-<a href="tdb"> Retour au tableau de bord</a><br>
+            <tr class="table-secondary">
+                <td>{{ vehicule.getType()}}</td>
+                <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
+                <td>{{ vehicule.getOperation }}</td>
+                <td>{{ vehicule.getProbleme() }}</td>
+                <td> <a class="btn btn-danger" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

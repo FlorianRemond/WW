@@ -87,6 +87,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
 
       <div align=\"center\"><h2>Tableau de bord</h2></div><br>
       <h5>Graphique des opérations : </h5><br>
+
       <h5>Liste des opérations : </h5><br>
 
         <table class=\"table table-hover\">
@@ -103,35 +104,35 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
 
             <tbody>
             ";
-        // line 40
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["operations"]) || array_key_exists("operations", $context) ? $context["operations"] : (function () { throw new RuntimeError('Variable "operations" does not exist.', 40, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["operations"]) || array_key_exists("operations", $context) ? $context["operations"] : (function () { throw new RuntimeError('Variable "operations" does not exist.', 41, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["operation"]) {
-            // line 41
+            // line 42
             echo "                <tr class=\"table-active\">
                     <td>";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getSujet", [], "method", false, false, false, 42), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 43
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateDebut", [], "any", false, false, false, 43), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getSujet", [], "method", false, false, false, 43), "html", null, true);
             echo "</td>
                     <td>";
             // line 44
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateFin", [], "any", false, false, false, 44), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateDebut", [], "any", false, false, false, 44), "d/m/Y"), "html", null, true);
             echo "</td>
                     <td>";
             // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDescription", [], "method", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDateFin", [], "any", false, false, false, 45), "d/m/Y"), "html", null, true);
             echo "</td>
                     <td>";
             // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getPiece", [], "method", false, false, false, 46), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getDescription", [], "method", false, false, false, 46), "html", null, true);
             echo "</td>
                     <td>";
             // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getNoteTech", [], "method", false, false, false, 47), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getPiece", [], "method", false, false, false, 47), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["operation"], "getNoteTech", [], "method", false, false, false, 48), "html", null, true);
             echo "</td>
                  </tr>
             ";
@@ -139,7 +140,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['operation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
+        // line 51
         echo "           </tbody>
         </table>
       <br>
@@ -157,31 +158,31 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
 
       <tbody>
           ";
-        // line 66
+        // line 67
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 66, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 67, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["vehicule"]) {
-            // line 67
+            // line 68
             echo "          <tr class=\"table-secondary\">
               <td>";
-            // line 68
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 68), "html", null, true);
-            echo "</td>
-              <td>";
             // line 69
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 69), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 69), "html", null, true);
             echo "</td>
               <td>";
             // line 70
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 70), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 70), "d/m/Y"), "html", null, true);
             echo "</td>
               <td>";
             // line 71
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 71), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 71), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 72
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 72), "html", null, true);
             echo "</td>
               <td> <a class=\"btn btn-danger\" href=\"";
-            // line 72
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 72)]), "html", null, true);
+            // line 73
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 73)]), "html", null, true);
             echo "\" role=\"button\"> Sélectionner ce véhicule</a></td>
           </tr>
           ";
@@ -189,7 +190,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['vehicule'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 75
+        // line 76
         echo "      </tbody>
     </table>
   ";
@@ -213,7 +214,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
 
     public function getDebugInfo()
     {
-        return array (  193 => 75,  184 => 72,  180 => 71,  176 => 70,  172 => 69,  168 => 68,  165 => 67,  161 => 66,  143 => 50,  134 => 47,  130 => 46,  126 => 45,  122 => 44,  118 => 43,  114 => 42,  111 => 41,  107 => 40,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  194 => 76,  185 => 73,  181 => 72,  177 => 71,  173 => 70,  169 => 69,  166 => 68,  162 => 67,  144 => 51,  135 => 48,  131 => 47,  127 => 46,  123 => 45,  119 => 44,  115 => 43,  112 => 42,  108 => 41,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -242,6 +243,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
 
       <div align=\"center\"><h2>Tableau de bord</h2></div><br>
       <h5>Graphique des opérations : </h5><br>
+
       <h5>Liste des opérations : </h5><br>
 
         <table class=\"table table-hover\">

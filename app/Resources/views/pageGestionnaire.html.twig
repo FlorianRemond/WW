@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -15,7 +14,18 @@
     </nav>
 
     <div align="center" ><h2 >Page Gestionnaire</h2></div><br>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="pageVehiculeInsert">Ajout d'un véhicule</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+
+    <br>
     <h5 style="text-decoration:underline">Liste des véhicules : </h5><br>
     <table class="table table-hover">
         <thead>
@@ -28,21 +38,22 @@
         </thead>
 
         <tbody>
+        <tr>
         {% for key,vehicule in vehicules %}
-            <tr class="table-secondary">
-                <td>{{ vehicule.getType()}}</td>
-                <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
-                <td>{{ vehicule.getOperation }}</td>
-                <td>{{ vehicule.getProbleme() }}</td>
-                <td> <a class="btn btn-danger" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
+            <td>{{ vehicule.getType()}}</td>
+            <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
+            <td>{{ vehicule.getOperation }}</td>
+            <td>{{ vehicule.getProbleme() }}</td>
+            <td><a type="button" class="btn btn-outline-info" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}">Visualiser un véhicule</a></td>
+            <td><a type="button" class="btn btn-outline-warning" href="{{ path('vehicule_remove_id', {'id': vehicule.id} ) }}">Suppression d'un véhicule</a></td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
     <br>
-    <a type="button" href="pageVehiculeInsert"class="btn btn-primary btn-lg btn-block">Ajouter un véhicule</a><br>
-
-{% endblock %}
+    </table>
+    <br>
+   {% endblock %}
 
 
 

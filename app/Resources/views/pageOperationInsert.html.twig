@@ -1,7 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block body %}
  {#affichage des champs du formulaire un par un grace à la variable formTechnicien#}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pageTechnicien">Technicien</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 {{ form_start (formOperation) }}
     {{ form_row (formOperation.sujet) }}
     {{ form_row (formOperation.dateDebut) }}
