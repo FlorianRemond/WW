@@ -5,10 +5,10 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href={{ path ('tdb') }}>Tableau de bord <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pageAdmin">Administrateur</a>
+                    <a class="nav-link" href={{ path ('pageAdmin') }}>Administrateur</a>
                 </li>
             </ul>
         </div>
@@ -20,10 +20,10 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="pageGestionnaireInsert">Ajout d'un gestionnaire</a>
+                    <a class="nav-link" href= {{ path('pageGestionnaire_Insert') }}>Ajout d'un gestionnaire</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pageTechnicienInsert">Ajout d'un technicien</a>
+                    <a class="nav-link" href= {{ path ('pageTechnicien_insert') }}>Ajout d'un technicien</a>
                 </li>
             </ul>
         </div>
@@ -38,12 +38,12 @@
              </tr>
         </thead>
         <tbody>
-            <tr>
+
                 {% for key,gestionnaire in gestionnaires %}
+            <tr>
                 <td>{{ gestionnaire.getNom() }}</td>
                 <td>{{ gestionnaire.getPrenom() }}</td>
-                <td><a type="button" class="btn btn-outline-warning" href="{{ path('gestionnaire_remove_id', {'id': gestionnaire.id} ) }}">Supprimer</a></td><br>
-
+                <td><a type="button" class="btn btn-outline-warning" href="{{ path('gestionnaire_remove_id', {'id': gestionnaire.id} ) }}">Supprimer</a></td>
             </tr>
                 {% endfor %}
         </tbody>
@@ -59,11 +59,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+
                 {% for key,technicien in techniciens %}
+            <tr>
                 <td>{{ technicien.getNom() }}</td>
                 <td>{{ technicien.getPrenom() }}</td>
-                <td><a type="button" class="btn btn-outline-warning" href="{{ path('technicien_remove_id', {'id': technicien.id} ) }}">Supprimer</a></td><br>
+                <td><a type="button" class="btn btn-outline-warning" href="{{ path('technicien_remove_id', {'id': technicien.id} ) }}">Supprimer</a></td>
             </tr>
                 {% endfor %}
         </tbody>

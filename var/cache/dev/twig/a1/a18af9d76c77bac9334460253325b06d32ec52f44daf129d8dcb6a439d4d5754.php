@@ -65,10 +65,22 @@ class __TwigTemplate_a91a829abdcbac7d292a3865df9f66d9cc031578ab6ab75051fc12e4df4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo "
+        echo "    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+             <ul class=\"navbar-nav mr-auto\">
+                 <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tdb");
+        echo ">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+             </ul>
+        </div>
+    </nav>
 <h1>Le véhicule ";
-        // line 4
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 4, $this->source); })()), "getId", [], "method", false, false, false, 4), "html", null, true);
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 13, $this->source); })()), "getType", [], "method", false, false, false, 13), "html", null, true);
         echo " est sélectionné : </h1>
     <table class=\"table table-hover\">
         <thead>
@@ -80,20 +92,20 @@ class __TwigTemplate_a91a829abdcbac7d292a3865df9f66d9cc031578ab6ab75051fc12e4df4
         </tr>
         <tr class=\"table-light\">
             <th scope=\"row\">";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 14, $this->source); })()), "getType", [], "method", false, false, false, 14), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 23, $this->source); })()), "getType", [], "method", false, false, false, 23), "html", null, true);
         echo "</th>
             <td>C";
-        // line 15
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 15, $this->source); })()), "getDateAchat", [], "method", false, false, false, 15), "d/m/Y"), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 24, $this->source); })()), "getDateAchat", [], "method", false, false, false, 24), "d/m/Y"), "html", null, true);
         echo "</td>
             <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 16, $this->source); })()), "getOperation", [], "method", false, false, false, 16), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 25, $this->source); })()), "getOperation", [], "method", false, false, false, 25), "html", null, true);
         echo "</td>
             <td>";
-        // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 17, $this->source); })()), "getProbleme", [], "method", false, false, false, 17), "html", null, true);
+        // line 26
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["vehicule"]) || array_key_exists("vehicule", $context) ? $context["vehicule"] : (function () { throw new RuntimeError('Variable "vehicule" does not exist.', 26, $this->source); })()), "getProbleme", [], "method", false, false, false, 26), "html", null, true);
         echo "</td>
         </tr>
 ";
@@ -117,15 +129,24 @@ class __TwigTemplate_a91a829abdcbac7d292a3865df9f66d9cc031578ab6ab75051fc12e4df4
 
     public function getDebugInfo()
     {
-        return array (  96 => 17,  92 => 16,  88 => 15,  84 => 14,  71 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  108 => 26,  104 => 25,  100 => 24,  96 => 23,  83 => 13,  75 => 8,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 
-<h1>Le véhicule {{ vehicule.getId() }} est sélectionné : </h1>
+        <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
+             <ul class=\"navbar-nav mr-auto\">
+                 <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href={{ path('tdb') }}>Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                </li>
+             </ul>
+        </div>
+    </nav>
+<h1>Le véhicule {{ vehicule.getType() }} est sélectionné : </h1>
     <table class=\"table table-hover\">
         <thead>
         <tr>

@@ -72,10 +72,16 @@ class __TwigTemplate_07eeb6a707de3fed04af1cc3da6c03c028120b48c033d82f9bd79b8304d
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href=";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tdb");
+        echo ">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                    <a class=\"nav-link\" href=";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageGestionnaire");
+        echo ">Gestionnaire</a>
                 </li>
             </ul>
         </div>
@@ -127,7 +133,7 @@ class __TwigTemplate_07eeb6a707de3fed04af1cc3da6c03c028120b48c033d82f9bd79b8304d
 
     public function getDebugInfo()
     {
-        return array (  106 => 23,  101 => 21,  97 => 20,  93 => 19,  89 => 18,  85 => 17,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  112 => 23,  107 => 21,  103 => 20,  99 => 19,  95 => 18,  91 => 17,  83 => 12,  77 => 9,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -140,10 +146,10 @@ class __TwigTemplate_07eeb6a707de3fed04af1cc3da6c03c028120b48c033d82f9bd79b8304d
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href={{ path('tdb') }}>Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                    <a class=\"nav-link\" href={{ path('pageGestionnaire') }}>Gestionnaire</a>
                 </li>
             </ul>
         </div>

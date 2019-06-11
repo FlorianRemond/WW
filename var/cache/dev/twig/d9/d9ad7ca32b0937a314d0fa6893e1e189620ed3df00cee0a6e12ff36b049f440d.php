@@ -72,10 +72,16 @@ class __TwigTemplate_406645ad55836cb372b4768fee91afc5012963b25a9ddc05dbbb14e1d80
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href=";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tdb");
+        echo ">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                    <a class=\"nav-link\" href=";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageAdmin");
+        echo ">Administrateur</a>
                 </li>
             </ul>
         </div>
@@ -118,7 +124,7 @@ class __TwigTemplate_406645ad55836cb372b4768fee91afc5012963b25a9ddc05dbbb14e1d80
 
     public function getDebugInfo()
     {
-        return array (  98 => 21,  93 => 19,  89 => 18,  85 => 17,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  104 => 21,  99 => 19,  95 => 18,  91 => 17,  83 => 12,  77 => 9,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -131,10 +137,10 @@ class __TwigTemplate_406645ad55836cb372b4768fee91afc5012963b25a9ddc05dbbb14e1d80
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href={{ path('tdb') }}>Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                    <a class=\"nav-link\" href={{ path('pageAdmin') }}>Administrateur</a>
                 </li>
             </ul>
         </div>

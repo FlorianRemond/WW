@@ -70,10 +70,16 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item \">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href=";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tdb");
+        echo ">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                    <a class=\"nav-link\" href=";
+        // line 11
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageAdmin");
+        echo ">Administrateur</a>
                 </li>
             </ul>
         </div>
@@ -85,10 +91,16 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
             <ul class=\"navbar-nav mr-auto\">
 
                 <li class=\"nav-item \">
-                    <a class=\"nav-link\" href=\"pageGestionnaireInsert\">Ajout d'un gestionnaire</a>
+                    <a class=\"nav-link\" href= ";
+        // line 23
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageGestionnaire_Insert");
+        echo ">Ajout d'un gestionnaire</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageTechnicienInsert\">Ajout d'un technicien</a>
+                    <a class=\"nav-link\" href= ";
+        // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageTechnicien_insert");
+        echo ">Ajout d'un technicien</a>
                 </li>
             </ul>
         </div>
@@ -103,25 +115,26 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
              </tr>
         </thead>
         <tbody>
-            <tr>
+
                 ";
         // line 42
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["gestionnaires"]) || array_key_exists("gestionnaires", $context) ? $context["gestionnaires"] : (function () { throw new RuntimeError('Variable "gestionnaires" does not exist.', 42, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["gestionnaire"]) {
             // line 43
-            echo "                <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getNom", [], "method", false, false, false, 43), "html", null, true);
-            echo "</td>
+            echo "            <tr>
                 <td>";
             // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getPrenom", [], "method", false, false, false, 44), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getNom", [], "method", false, false, false, 44), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "getPrenom", [], "method", false, false, false, 45), "html", null, true);
             echo "</td>
                 <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"";
-            // line 45
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestionnaire_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "id", [], "any", false, false, false, 45)]), "html", null, true);
-            echo "\">Supprimer</a></td><br>
-
+            // line 46
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestionnaire_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["gestionnaire"], "id", [], "any", false, false, false, 46)]), "html", null, true);
+            echo "\">Supprimer</a></td>
             </tr>
                 ";
         }
@@ -142,31 +155,33 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
             </tr>
         </thead>
         <tbody>
-            <tr>
+
                 ";
         // line 63
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["techniciens"]) || array_key_exists("techniciens", $context) ? $context["techniciens"] : (function () { throw new RuntimeError('Variable "techniciens" does not exist.', 63, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["technicien"]) {
             // line 64
-            echo "                <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getNom", [], "method", false, false, false, 64), "html", null, true);
-            echo "</td>
+            echo "            <tr>
                 <td>";
             // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getPrenom", [], "method", false, false, false, 65), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getNom", [], "method", false, false, false, 65), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 66
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["technicien"], "getPrenom", [], "method", false, false, false, 66), "html", null, true);
             echo "</td>
                 <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"";
-            // line 66
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("technicien_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["technicien"], "id", [], "any", false, false, false, 66)]), "html", null, true);
-            echo "\">Supprimer</a></td><br>
+            // line 67
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("technicien_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["technicien"], "id", [], "any", false, false, false, 67)]), "html", null, true);
+            echo "\">Supprimer</a></td>
             </tr>
                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['technicien'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 69
+        // line 70
         echo "        </tbody>
     </table>
   <br>
@@ -191,7 +206,7 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
 
     public function getDebugInfo()
     {
-        return array (  170 => 69,  161 => 66,  157 => 65,  152 => 64,  148 => 63,  132 => 49,  122 => 45,  118 => 44,  113 => 43,  109 => 42,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  185 => 70,  176 => 67,  172 => 66,  168 => 65,  165 => 64,  161 => 63,  145 => 49,  136 => 46,  132 => 45,  128 => 44,  125 => 43,  121 => 42,  102 => 26,  96 => 23,  81 => 11,  75 => 8,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -203,10 +218,10 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item \">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href={{ path ('tdb') }}>Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                    <a class=\"nav-link\" href={{ path ('pageAdmin') }}>Administrateur</a>
                 </li>
             </ul>
         </div>
@@ -218,10 +233,10 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
             <ul class=\"navbar-nav mr-auto\">
 
                 <li class=\"nav-item \">
-                    <a class=\"nav-link\" href=\"pageGestionnaireInsert\">Ajout d'un gestionnaire</a>
+                    <a class=\"nav-link\" href= {{ path('pageGestionnaire_Insert') }}>Ajout d'un gestionnaire</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageTechnicienInsert\">Ajout d'un technicien</a>
+                    <a class=\"nav-link\" href= {{ path ('pageTechnicien_insert') }}>Ajout d'un technicien</a>
                 </li>
             </ul>
         </div>
@@ -236,12 +251,12 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
              </tr>
         </thead>
         <tbody>
-            <tr>
+
                 {% for key,gestionnaire in gestionnaires %}
+            <tr>
                 <td>{{ gestionnaire.getNom() }}</td>
                 <td>{{ gestionnaire.getPrenom() }}</td>
-                <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"{{ path('gestionnaire_remove_id', {'id': gestionnaire.id} ) }}\">Supprimer</a></td><br>
-
+                <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"{{ path('gestionnaire_remove_id', {'id': gestionnaire.id} ) }}\">Supprimer</a></td>
             </tr>
                 {% endfor %}
         </tbody>
@@ -257,11 +272,12 @@ class __TwigTemplate_6c3312719c529d0805b2d4e91dc7049d3c06e3fa129d0998727e4b0bd33
             </tr>
         </thead>
         <tbody>
-            <tr>
+
                 {% for key,technicien in techniciens %}
+            <tr>
                 <td>{{ technicien.getNom() }}</td>
                 <td>{{ technicien.getPrenom() }}</td>
-                <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"{{ path('technicien_remove_id', {'id': technicien.id} ) }}\">Supprimer</a></td><br>
+                <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"{{ path('technicien_remove_id', {'id': technicien.id} ) }}\">Supprimer</a></td>
             </tr>
                 {% endfor %}
         </tbody>

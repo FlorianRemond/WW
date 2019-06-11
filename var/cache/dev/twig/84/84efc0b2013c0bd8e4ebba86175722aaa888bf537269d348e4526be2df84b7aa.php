@@ -72,7 +72,10 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
                     <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                    <a class=\"nav-link\" href=";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageGestionnaire");
+        echo ">Gestionnaire</a>
                 </li>
             </ul>
         </div>
@@ -83,7 +86,10 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageVehiculeInsert\">Ajout d'un véhicule</a>
+                    <a class=\"nav-link\" href=";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageVehicule_insert");
+        echo ">Ajout d'un véhicule</a>
                 </li>
             </ul>
         </div>
@@ -103,35 +109,37 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         </thead>
 
         <tbody>
-        <tr>
+
         ";
         // line 42
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["vehicules"]) || array_key_exists("vehicules", $context) ? $context["vehicules"] : (function () { throw new RuntimeError('Variable "vehicules" does not exist.', 42, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["vehicule"]) {
             // line 43
-            echo "            <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 43), "html", null, true);
-            echo "</td>
+            echo "            <tr>
             <td>";
             // line 44
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 44), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getType", [], "method", false, false, false, 44), "html", null, true);
             echo "</td>
             <td>";
             // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getDateAchat", [], "any", false, false, false, 45), "d/m/Y"), "html", null, true);
             echo "</td>
             <td>";
             // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 46), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getOperation", [], "any", false, false, false, 46), "html", null, true);
+            echo "</td>
+            <td>";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 47), "html", null, true);
             echo "</td>
             <td><a type=\"button\" class=\"btn btn-outline-info\" href=\"";
-            // line 47
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 47)]), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 48)]), "html", null, true);
             echo "\">Visualiser un véhicule</a></td>
             <td><a type=\"button\" class=\"btn btn-outline-warning\" href=\"";
-            // line 48
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 48)]), "html", null, true);
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_remove_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 49)]), "html", null, true);
             echo "\">Suppression d'un véhicule</a></td>
             </tr>
         ";
@@ -139,13 +147,11 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['vehicule'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 52
         echo "        </tbody>
     </table>
     <br>
-    </table>
-    <br>
-   ";
+    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -166,7 +172,7 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
 
     public function getDebugInfo()
     {
-        return array (  143 => 51,  134 => 48,  130 => 47,  126 => 46,  122 => 45,  118 => 44,  113 => 43,  109 => 42,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  151 => 52,  142 => 49,  138 => 48,  134 => 47,  130 => 46,  126 => 45,  122 => 44,  119 => 43,  115 => 42,  91 => 21,  77 => 10,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -180,7 +186,7 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
                     <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                    <a class=\"nav-link\" href={{ path('pageGestionnaire') }}>Gestionnaire</a>
                 </li>
             </ul>
         </div>
@@ -191,7 +197,7 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageVehiculeInsert\">Ajout d'un véhicule</a>
+                    <a class=\"nav-link\" href={{ path('pageVehicule_insert')}}>Ajout d'un véhicule</a>
                 </li>
             </ul>
         </div>
@@ -211,8 +217,9 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         </thead>
 
         <tbody>
-        <tr>
+
         {% for key,vehicule in vehicules %}
+            <tr>
             <td>{{ vehicule.getType()}}</td>
             <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
             <td>{{ vehicule.getOperation }}</td>
@@ -224,9 +231,7 @@ class __TwigTemplate_f20fc8c6e8360801e45bc02f30eebab220aa4981f8355328dc6546d4701
         </tbody>
     </table>
     <br>
-    </table>
-    <br>
-   {% endblock %}
+    {% endblock %}
 
 
 

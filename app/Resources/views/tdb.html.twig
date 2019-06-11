@@ -5,16 +5,16 @@
           <div class="collapse navbar-collapse" id="navbarColor01">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                      <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href={{ path('tdb') }}>Tableau de bord <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="pageAdmin">Administrateur</a>
+                      <a class="nav-link" href={{ path('pageAdmin')}}>Administrateur</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="pageGestionnaire">Gestionnaire</a>
+                      <a class="nav-link" href={{ path('pageGestionnaire')}}>Gestionnaire</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="pageTechnicien">Technicien</a>
+                      <a class="nav-link" href={{ path('pageTechnicien') }}>Technicien</a>
                   </li>
               </ul>
           </div>
@@ -70,7 +70,7 @@
               <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
               <td>{{ vehicule.getOperation }}</td>
               <td>{{ vehicule.getProbleme() }}</td>
-              <td> <a class="btn btn-danger" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
+              <td> <a class="btn btn-outline-success" href="{{ path('vehicule_view_id', {'id': vehicule.id} ) }}" role="button"> Sélectionner ce véhicule</a></td>
           </tr>
           {% endfor %}
       </tbody>

@@ -7,7 +7,7 @@
                     <a class="nav-link" href="tdb">Tableau de bord <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pageGestionnaire">Gestionnaire</a>
+                    <a class="nav-link" href={{ path('pageGestionnaire') }}>Gestionnaire</a>
                 </li>
             </ul>
         </div>
@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="pageVehiculeInsert">Ajout d'un véhicule</a>
+                    <a class="nav-link" href={{ path('pageVehicule_insert')}}>Ajout d'un véhicule</a>
                 </li>
             </ul>
         </div>
@@ -38,8 +38,9 @@
         </thead>
 
         <tbody>
-        <tr>
+
         {% for key,vehicule in vehicules %}
+            <tr>
             <td>{{ vehicule.getType()}}</td>
             <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
             <td>{{ vehicule.getOperation }}</td>
@@ -51,9 +52,7 @@
         </tbody>
     </table>
     <br>
-    </table>
-    <br>
-   {% endblock %}
+    {% endblock %}
 
 
 

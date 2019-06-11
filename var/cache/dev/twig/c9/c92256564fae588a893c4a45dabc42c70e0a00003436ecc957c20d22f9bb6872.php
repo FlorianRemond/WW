@@ -70,16 +70,28 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
           <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
               <ul class=\"navbar-nav mr-auto\">
                   <li class=\"nav-item active\">
-                      <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                      <a class=\"nav-link\" href=";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tdb");
+        echo ">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                   </li>
                   <li class=\"nav-item\">
-                      <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                      <a class=\"nav-link\" href=";
+        // line 11
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageAdmin");
+        echo ">Administrateur</a>
                   </li>
                   <li class=\"nav-item\">
-                      <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                      <a class=\"nav-link\" href=";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageGestionnaire");
+        echo ">Gestionnaire</a>
                   </li>
                   <li class=\"nav-item\">
-                      <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                      <a class=\"nav-link\" href=";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageTechnicien");
+        echo ">Technicien</a>
                   </li>
               </ul>
           </div>
@@ -180,7 +192,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
             // line 72
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 72), "html", null, true);
             echo "</td>
-              <td> <a class=\"btn btn-danger\" href=\"";
+              <td> <a class=\"btn btn-outline-success\" href=\"";
             // line 73
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 73)]), "html", null, true);
             echo "\" role=\"button\"> Sélectionner ce véhicule</a></td>
@@ -214,7 +226,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
 
     public function getDebugInfo()
     {
-        return array (  194 => 76,  185 => 73,  181 => 72,  177 => 71,  173 => 70,  169 => 69,  166 => 68,  162 => 67,  144 => 51,  135 => 48,  131 => 47,  127 => 46,  123 => 45,  119 => 44,  115 => 43,  112 => 42,  108 => 41,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  206 => 76,  197 => 73,  193 => 72,  189 => 71,  185 => 70,  181 => 69,  178 => 68,  174 => 67,  156 => 51,  147 => 48,  143 => 47,  139 => 46,  135 => 45,  131 => 44,  127 => 43,  124 => 42,  120 => 41,  93 => 17,  87 => 14,  81 => 11,  75 => 8,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -226,16 +238,16 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
           <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
               <ul class=\"navbar-nav mr-auto\">
                   <li class=\"nav-item active\">
-                      <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                      <a class=\"nav-link\" href={{ path('tdb') }}>Tableau de bord <span class=\"sr-only\">(current)</span></a>
                   </li>
                   <li class=\"nav-item\">
-                      <a class=\"nav-link\" href=\"pageAdmin\">Administrateur</a>
+                      <a class=\"nav-link\" href={{ path('pageAdmin')}}>Administrateur</a>
                   </li>
                   <li class=\"nav-item\">
-                      <a class=\"nav-link\" href=\"pageGestionnaire\">Gestionnaire</a>
+                      <a class=\"nav-link\" href={{ path('pageGestionnaire')}}>Gestionnaire</a>
                   </li>
                   <li class=\"nav-item\">
-                      <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                      <a class=\"nav-link\" href={{ path('pageTechnicien') }}>Technicien</a>
                   </li>
               </ul>
           </div>
@@ -291,7 +303,7 @@ class __TwigTemplate_6208964f6c0d0f95690f1e11115176f04df8f8049c3feb6f4a5595d6632
               <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
               <td>{{ vehicule.getOperation }}</td>
               <td>{{ vehicule.getProbleme() }}</td>
-              <td> <a class=\"btn btn-danger\" href=\"{{ path('vehicule_view_id', {'id': vehicule.id} ) }}\" role=\"button\"> Sélectionner ce véhicule</a></td>
+              <td> <a class=\"btn btn-outline-success\" href=\"{{ path('vehicule_view_id', {'id': vehicule.id} ) }}\" role=\"button\"> Sélectionner ce véhicule</a></td>
           </tr>
           {% endfor %}
       </tbody>

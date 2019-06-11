@@ -72,10 +72,16 @@ class __TwigTemplate_3654f435badf5bb9b0af17a2184519960bb349b3180cd54a5b93ba5c563
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href=";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tdb");
+        echo ">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                    <a class=\"nav-link\" href=";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageTechnicien");
+        echo ">Technicien</a>
                 </li>
             </ul>
         </div>
@@ -135,7 +141,7 @@ class __TwigTemplate_3654f435badf5bb9b0af17a2184519960bb349b3180cd54a5b93ba5c563
 
     public function getDebugInfo()
     {
-        return array (  114 => 25,  109 => 23,  105 => 22,  101 => 21,  97 => 20,  93 => 19,  89 => 18,  85 => 17,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  120 => 25,  115 => 23,  111 => 22,  107 => 21,  103 => 20,  99 => 19,  95 => 18,  91 => 17,  83 => 12,  77 => 9,  70 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -148,10 +154,10 @@ class __TwigTemplate_3654f435badf5bb9b0af17a2184519960bb349b3180cd54a5b93ba5c563
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href={{ path('tdb') }}>Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                    <a class=\"nav-link\" href={{ path('pageTechnicien') }}>Technicien</a>
                 </li>
             </ul>
         </div>

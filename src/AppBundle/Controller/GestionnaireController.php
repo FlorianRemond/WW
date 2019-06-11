@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class GestionnaireController extends Controller
 {
     /**
-     * @Route("/pageGestionnaire/insert", name="pageGestionnaire_Insert")
+     * @Route("/pageGestionnaireInsert", name="pageGestionnaire_Insert")
      */
     //affiche la page de gestion des gestionnaires
     public function gestionnaireInsertAction(Request $request)

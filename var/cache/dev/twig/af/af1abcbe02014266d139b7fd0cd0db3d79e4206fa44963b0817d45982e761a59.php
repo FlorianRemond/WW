@@ -70,10 +70,16 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href=";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tdb");
+        echo ">Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                    <a class=\"nav-link\" href=";
+        // line 11
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageTechnicien");
+        echo ">Technicien</a>
                 </li>
             </ul>
         </div>
@@ -86,7 +92,10 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
             <ul class=\"navbar-nav mr-auto\">
 
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageOperationInsert\">Ajout d'une opération</a>
+                    <a class=\"nav-link\" href=";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pageOperation_insert");
+        echo ">Ajout d'une opération</a>
                 </li>
             </ul>
         </div>
@@ -225,7 +234,7 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
 
     public function getDebugInfo()
     {
-        return array (  205 => 82,  196 => 79,  192 => 78,  188 => 77,  184 => 76,  180 => 75,  177 => 74,  173 => 73,  153 => 55,  144 => 52,  140 => 51,  136 => 50,  132 => 49,  128 => 48,  124 => 47,  120 => 46,  115 => 45,  111 => 44,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  214 => 82,  205 => 79,  201 => 78,  197 => 77,  193 => 76,  189 => 75,  186 => 74,  182 => 73,  162 => 55,  153 => 52,  149 => 51,  145 => 50,  141 => 49,  137 => 48,  133 => 47,  129 => 46,  124 => 45,  120 => 44,  97 => 24,  81 => 11,  75 => 8,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -237,10 +246,10 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
         <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
             <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link\" href=\"tdb\">Tableau de bord <span class=\"sr-only\">(current)</span></a>
+                    <a class=\"nav-link\" href={{ path('tdb') }}>Tableau de bord <span class=\"sr-only\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageTechnicien\">Technicien</a>
+                    <a class=\"nav-link\" href={{ path('pageTechnicien') }}>Technicien</a>
                 </li>
             </ul>
         </div>
@@ -253,7 +262,7 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
             <ul class=\"navbar-nav mr-auto\">
 
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"pageOperationInsert\">Ajout d'une opération</a>
+                    <a class=\"nav-link\" href={{ path('pageOperation_insert') }}>Ajout d'une opération</a>
                 </li>
             </ul>
         </div>
