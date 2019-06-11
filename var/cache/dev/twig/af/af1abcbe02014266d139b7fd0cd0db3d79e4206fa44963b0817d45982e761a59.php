@@ -191,7 +191,7 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
             // line 78
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicule"], "getProbleme", [], "method", false, false, false, 78), "html", null, true);
             echo "</td>
-                <td> <a class=\"btn btn-danger\" href=\"";
+                <td> <a class=\"btn btn-outline-success\" href=\"";
             // line 79
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehicule_view_id", ["id" => twig_get_attribute($this->env, $this->source, $context["vehicule"], "id", [], "any", false, false, false, 79)]), "html", null, true);
             echo "\" role=\"button\"> Sélectionner ce véhicule</a></td>
@@ -308,7 +308,7 @@ class __TwigTemplate_62894dc1d56317d827b256eafd806894959342e072b7bf547161cb3ea68
                 <td>{{ vehicule.getDateAchat|date('d/m/Y') }}</td>
                 <td>{{ vehicule.getOperation }}</td>
                 <td>{{ vehicule.getProbleme() }}</td>
-                <td> <a class=\"btn btn-danger\" href=\"{{ path('vehicule_view_id', {'id': vehicule.id} ) }}\" role=\"button\"> Sélectionner ce véhicule</a></td>
+                <td> <a class=\"btn btn-outline-success\" href=\"{{ path('vehicule_view_id', {'id': vehicule.id} ) }}\" role=\"button\"> Sélectionner ce véhicule</a></td>
             </tr>
         {% endfor %}
         </tbody>
